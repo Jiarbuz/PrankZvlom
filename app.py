@@ -515,6 +515,10 @@ def index():
 def home():
     return redirect(url_for('index'))
 
+@app.route('/change_language/<lang>')
+def change_language(lang):
+    return redirect(url_for('set_language', lang=lang))
+
 @app.route('/sitemap.xml')
 def sitemap():
     pages = []

@@ -150,3 +150,26 @@
 2025-07-29 03:03:32,276 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 03:03:32] "POST /log HTTP/1.1" 200 -
 2025-07-29 03:03:42,055 - werkzeug - ERROR - 127.0.0.1 - - [29/Jul/2025 03:03:42] code 400, message Bad request syntax ('\x16\x03\x01\x07O\x01\x00\x07K\x03\x03')
 2025-07-29 03:03:42,056 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 03:03:42] "[31m[1m\x16\x03\x01\x07O\x01\x00\x07K\x03\x03[0m" 400 -
+2025-07-29 04:44:33,846 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 04:44:33,869 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 04:44:33,870 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 04:44:33,871 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 04:44:36,406 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 04:44:36,424 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 04:44:36,426 - werkzeug - INFO -  * Debugger PIN: 289-539-384
+2025-07-29 04:44:42,588 - app - INFO - Redis connection established
+2025-07-29 04:44:44,643 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:44] "GET / HTTP/1.1" 200 -
+2025-07-29 04:44:44,746 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:44] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 04:44:44,747 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 04:44:44,759 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:44] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 04:44:44,759 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:44] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 04:44:45,892 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:45] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 04:44:46,739 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "POST /log HTTP/1.1" 200 -
+2025-07-29 04:44:46,901 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-29 04:44:46,910 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "[32mGET /set_language/en HTTP/1.1[0m" 302 -
+2025-07-29 04:44:46,917 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "GET / HTTP/1.1" 200 -
+2025-07-29 04:44:46,956 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 04:44:46,957 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "GET /static/css/style.css HTTP/1.1" 200 -
