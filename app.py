@@ -7,6 +7,7 @@ import threading
 import logging
 from datetime import timedelta
 from functools import lru_cache
+from flask import Response, url_for
 from flask import Flask, render_template, request, session, redirect, url_for, abort, jsonify
 from flask_babel import Babel
 from flask_limiter import Limiter
@@ -40,6 +41,7 @@ app.config.update(
     SESSION_COOKIE_SAMESITE='Lax',
     PERMANENT_SESSION_LIFETIME=timedelta(days=1),
 )
+
 
 # Конфигурация Redis
 env = os.getenv("FLASK_ENV", "development")
@@ -512,6 +514,30 @@ def index():
 @limiter.limit("10 per minute")
 def home():
     return redirect(url_for('index'))
+
+@app.route('/sitemap.xml')
+def sitemap():
+    pages = []
+
+    for rule in app.url_map.iter_rules():
+        if "GET" in rule.methods and len(rule.arguments) == 0 and not rule.rule.startswith('/static'):
+            url = url_for(rule.endpoint, _external=True)
+            pages.append(url)
+
+    sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    sitemap_xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+
+    for page in pages:
+        sitemap_xml += '  <url>\n'
+        sitemap_xml += f'    <loc>{page}</loc>\n'
+        sitemap_xml += f'    <lastmod>{datetime.utcnow().date()}</lastmod>\n'
+        sitemap_xml += '    <changefreq>weekly</changefreq>\n'
+        sitemap_xml += '    <priority>0.8</priority>\n'
+        sitemap_xml += '  </url>\n'
+
+    sitemap_xml += '</urlset>'
+
+    return Response(sitemap_xml, mimetype='application/xml')
 
 @app.route('/set_language/<lang>')
 @limiter.limit("5 per minute")
