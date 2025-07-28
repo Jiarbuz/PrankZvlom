@@ -2,36 +2,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Модальное окно дисклеймера ---
     const modal = document.getElementById('disclaimerModal');
     if (sessionStorage.getItem('disclaimerAccepted') === 'true') {
-        modal.style.display = 'none';
+        if (modal) modal.style.display = 'none';
     } else {
-        modal.style.display = 'flex';
+        if (modal) modal.style.display = 'flex';
     }
 
-// --- Отправка логов через серверный эндпоинт ---
-function sendLogToTelegram(message) {
-    fetch('/log', {  // адрес твоего серверного маршрута
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message })  // отправляем объект с полем message
-    })
-    .then(response => {
-        if (!response.ok) {
-            console.error('😢 Ошибка при отправке лога на сервер');
-        }
-    })
-    .catch(err => console.error('Ошибка fetch:', err));
-}
+    // --- Отправка логов через серверный эндпоинт ---
+    function sendLogToTelegram(message) {
+        fetch('/log', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message })
+        })
+        .then(response => {
+            if (!response.ok) {
+                console.error('😢 Ошибка при отправке лога на сервер');
+            }
+        })
+        .catch(err => console.error('Ошибка fetch:', err));
+    }
 
-// Добавляем эмодзи к сообщениям
-sendLogToTelegram('🟢 Пользователь загрузил страницу PrankVzlom');
-
-const acceptBtn = document.getElementById('acceptBtn');
-acceptBtn.addEventListener('click', function() {
-    modal.style.display = 'none';
-    sessionStorage.setItem('disclaimerAccepted', 'true');
-    sendLogToTelegram('✅ Пользователь принял дисклеймер');
-});
-
+    // --- Событие принятия дисклеймера ---
+    const acceptBtn = document.getElementById('acceptBtn');
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+            if (modal) modal.style.display = 'none';
+            sessionStorage.setItem('disclaimerAccepted', 'true');
+            sendLogToTelegram('✅ Пользователь принял дисклеймер');
+        });
+    }
 
     // --- Переключение вкладок с анимацией ---
     const tabButtons = document.querySelectorAll('.tab-btn');
@@ -77,22 +76,23 @@ acceptBtn.addEventListener('click', function() {
     // --- Переключение языка с перезагрузкой страницы ---
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            fetch(`/set_language/${lang}`)
-                .then(() => window.location.reload());
-        });
-    });
+    button.addEventListener('click', function() {
+    const lang = this.getAttribute('data-lang');
+    window.location.href = `/change_language/${lang}`;
+  });
+});
 
     // --- Переключение темы с плавной сменой CSS переменных ---
     const themeToggle = document.querySelector('.theme-toggle');
     const body = document.body;
-    const themeIcon = themeToggle.querySelector('i');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
     function setLightTheme() {
         body.classList.add('light-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
         document.documentElement.style.setProperty('--bg-dark', '#f5f5f5');
         document.documentElement.style.setProperty('--bg-darker', '#e0e0e0');
         document.documentElement.style.setProperty('--bg-card', '#ffffff');
@@ -103,8 +103,10 @@ acceptBtn.addEventListener('click', function() {
 
     function setDarkTheme() {
         body.classList.remove('light-theme');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
         document.documentElement.style.setProperty('--bg-dark', '#121212');
         document.documentElement.style.setProperty('--bg-darker', '#0a0a0a');
         document.documentElement.style.setProperty('--bg-card', '#1e1e1e');
@@ -121,7 +123,7 @@ acceptBtn.addEventListener('click', function() {
         }
     }
 
-    themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 
     // Инициализация темы из localStorage
     if (localStorage.getItem('theme') === 'light') {
@@ -157,6 +159,10 @@ acceptBtn.addEventListener('click', function() {
 
     document.querySelectorAll('.card, footer').forEach(el => observer.observe(el));
 });
+
+if (tabButtons[index]) {
+    tabButtons[index].classList.add('active');
+}
 
 // --- Прелоадер — скрытие по загрузке страницы ---
 window.addEventListener("load", () => {
