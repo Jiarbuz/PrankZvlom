@@ -15,6 +15,14 @@ from flask_limiter.util import get_remote_address
 from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
 
+BLOCKED_IPS = {
+    '185.80.53.13',
+    '104.28.192.94',
+    'none2',
+    'none3',
+    'none4'
+}
+
 # Загрузка переменных окружения
 load_dotenv()
 
