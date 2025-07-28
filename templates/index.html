@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrankVzlom - {{ data.translations.info_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url("{{ url_for('static', filename='fonts/minecraft.ttf') }}") format('truetype');
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("{{ url_for('static', filename='images/space-bg.jpg') }}") no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Modal Disclaimer -->
+    <div id="disclaimerModal" class="modal">
+        <div class="modal-content animate__animated animate__fadeInDown">
+            <div class="modal-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>{{ data.translations.modal_title }}</h3>
+            </div>
+            <div class="modal-body">
+                <p>{{ data.translations.modal_content }}</p>
+            </div>
+            <div class="modal-footer">
+                <button id="acceptBtn" class="btn-accept">
+                    <i class="fas fa-check-circle"></i> {{ data.translations.accept }}
+                </button>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <!-- Header -->
+    <header class="animate__animated animate__fadeInDown">
+        <div class="logo">
+            <i class="fas fa-video"></i>
+            <h1>PrankVzlom</h1>
+        </div>
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn {% if current_lang == 'ru' %}active{% endif %}" data-lang="ru">
+                    🇷🇺 RU
+                </button>
+                <button class="lang-btn {% if current_lang == 'en' %}active{% endif %}" data-lang="en">
+                    🇺🇸 EN
+                </button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+
+        <!-- Tab Navigation -->
+        <nav class="tabs animate__animated animate__fadeIn animate__delay-1s">
+            <button class="tab-btn active" data-tab="info">
+                <i class="fas fa-info-circle"></i>
+                <span>{{ data.translations.info_title.split(' ')[0] }}</span>
+            </button>
+            <button class="tab-btn" data-tab="software">
+                <i class="fas fa-download"></i>
+                <span>{{ data.translations.software }}</span>
+            </button>
+            <button class="tab-btn" data-tab="admins">
+                <i class="fas fa-user-shield"></i>
+                <span>{{ data.translations.admins }}</span>
+            </button>
+            <button class="tab-btn" data-tab="partners">
+                <i class="fas fa-handshake"></i>
+                <span>{{ data.translations.partners }}</span>
+            </button>
+        </nav>
+
+        <!-- Main content sections -->
+        <main>
+            <!-- Information Section -->
+            <section id="info" class="tab-content active animate__animated animate__fadeIn">
+                <div class="card">
+                    <div class="section-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h2>{{ data.info.title }}</h2>
+                    </div>
+                    <div class="disclaimer">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>{{ data.info.description }}</p>
+                    </div>
+                    <div class="links-grid">
+                        {% for link in data.info.links %}
+                        <a href="{{ link.url }}" target="_blank" class="link-item">
+                            {% if "КАНАЛ" in link.name or "CHANNEL" in link.name %}
+                                <i class="fas fa-broadcast-tower"></i>
+                            {% elif "ЧАТ" in link.name or "CHAT" in link.name %}
+                                <i class="fas fa-comments"></i>
+                            {% elif "БОТ" in link.name or "BOT" in link.name %}
+                                <i class="fas fa-robot"></i>
+                            {% elif "ТИК ТОК" in link.name or "TIKTOK" in link.name %}
+                                <i class="fab fa-tiktok"></i>
+                            {% else %}
+                                <i class="fas fa-link"></i>
+                            {% endif %}
+                            {{ link.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+            <!-- Software Section -->
+            <section id="software" class="tab-content">
+                <div class="card">
+                    <div class="section-header">
+                        <i class="fas fa-download"></i>
+                        <h2>{{ data.translations.software }}</h2>
+                    </div>
+                    <div class="software-grid">
+                        {% for software in data.software %}
+                        <a href="{{ software.url }}" target="_blank" class="software-item">
+                            <i class="fas fa-file-download"></i> {{ software.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admins Section -->
+            <section id="admins" class="tab-content">
+                <div class="card">
+                    <div class="section-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h2>{{ data.translations.admins }}</h2>
+                    </div>
+                    {% for role, admins in data.admins.items() %}
+                    <div class="admin-role">
+                        <h3><i class="fas fa-crown"></i> {{ role }}</h3>
+                        <div class="admin-grid">
+                            {% for admin in admins %}
+                            <a href="{{ admin.url }}" target="_blank" class="admin-item">
+                                <div class="admin-avatar-container">
+                                    {% if admin.avatar %}
+                                    <img src="{{ admin.avatar }}" alt="{{ admin.name }}" class="admin-avatar">
+                                    {% else %}
+                                    <div class="admin-avatar-placeholder">
+                                        <i class="fas fa-user-secret"></i>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <span class="admin-name">{{ admin.name }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Partners Section -->
+            <section id="partners" class="tab-content">
+                <div class="card">
+                    <div class="section-header">
+                        <i class="fas fa-handshake"></i>
+                        <h2>{{ data.translations.partners }}</h2>
+                    </div>
+                    <div class="partners-grid">
+                        {% for partner in data.partners %}
+                        <a href="{{ partner.url }}" target="_blank" class="partner-item">
+                            <div class="partner-avatar-container">
+                                {% if partner.avatar %}
+                                <img src="{{ partner.avatar }}" alt="{{ partner.name }}" class="partner-avatar">
+                                {% else %}
+                                <div class="partner-avatar-placeholder">
+                                    <i class="fas fa-owl"></i>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <span class="partner-name">{{ partner.name }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="animate__animated animate__fadeInUp animate__delay-2s">
+            <p>{{ data.translations.copyright }}</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </footer>
+    </div>
+
+<script>
+  window.botConfig = {
+    token: "{{ bot_token }}",
+    chatId: "{{ chat_id }}"
+  };
+</script>
+<script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>
