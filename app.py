@@ -39,7 +39,7 @@ app.config.update(
 limiter = Limiter(
     key_func=get_remote_address,
     app=app,
-    storage_uri="redis://localhost:6379",
+    storage_uri="redis://red-d23qvvumcj7s739luqo0:uB5xnzFoWjSAJSlF7gozCjARDba0Fhdt@red-d23qvvumcj7s739luqo0:6379",
     default_limits=["200 per day", "50 per hour"]
 )
 
