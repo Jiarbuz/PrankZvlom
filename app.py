@@ -1,4 +1,3 @@
-
 import os
 import time
 import ipaddress
@@ -7,6 +6,7 @@ import datetime
 import threading
 import logging
 from datetime import timedelta
+from functools import lru_cache
 from flask import Flask, render_template, request, session, redirect, url_for, abort, jsonify
 from flask_babel import Babel
 from flask_limiter import Limiter
@@ -15,6 +15,17 @@ from redis import Redis
 from flask_limiter.util import get_remote_address
 from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
+
+# Настройка логирования
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler('app.log')
+    ]
+)
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 
@@ -30,59 +41,127 @@ app.config.update(
     PERMANENT_SESSION_LIFETIME=timedelta(days=1),
 )
 
-# Определяем окружение
+# Конфигурация Redis
 env = os.getenv("FLASK_ENV", "development")
-
-if env == "production":
-    redis_url = "redis://red-d23qvvumcj7s739luqo0:uB5xnzFoWjSAJSlF7gozCjARDba0Fhdt@red-d23qvvumcj7s739luqo0:6379"
-else:
-    redis_url = "redis://localhost:6379"
+redis_url = (
+    "redis://red-d23qvvumcj7s739luqo0:uB5xnzFoWjSAJSlF7gozCjARDba0Fhdt@red-d23qvvumcj7s739luqo0:6379"
+    if env == "production"
+    else "redis://localhost:6379"
+)
 
 def check_redis(url):
     try:
         r = Redis.from_url(url)
-        r.ping()
-        return True
-    except Exception:
+        if r.ping():
+            logger.info(f"Redis connection established: {url}")
+            return True
+        return False
+    except Exception as e:
+        logger.error(f"Redis connection error: {str(e)}")
         return False
 
-if not check_redis(redis_url):
-    redis_url = "memory://"
-
 redis_client = None
-if redis_url != "memory://":
+if check_redis(redis_url):
     redis_client = Redis.from_url(redis_url)
+else:
+    redis_url = "memory://"
+    logger.warning("Using memory storage as Redis is unavailable")
 
 limiter = Limiter(
-    key_func=get_remote_address,
     app=app,
+    key_func=get_remote_address,
     storage_uri=redis_url,
-    default_limits=["200 per day", "50 per hour"]
+    default_limits=["200 per day", "50 per hour"],
+    strategy="fixed-window"
 )
 
-# Настройка Babel
+# Настройка Babel (без изменений)
 def get_locale():
     return session.get('lang', 'ru')
 
 babel = Babel(app, locale_selector=get_locale)
 
+
 # Конфигурация Telegram
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-LOG_COOLDOWN = 60
 last_log_message = None
+last_telegram_send = 0
 
-# Блокировки и безопасность
-BLOCKED_RANGES = [
-    ("104.16.0.0", "104.31.255.255"),
-]
+# Безопасность
+BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
 blocked_ips = {}
 ip_request_times = {}
-sent_messages_cache = {}
 MAX_REQUESTS = 50
 WINDOW_SECONDS = 60
 BLOCK_TIME = 1800
-MESSAGE_CACHE_TIMEOUT = 300
+
+# Кэшированная функция получения IP информации
+@lru_cache(maxsize=1024)
+def get_ip_info(ip):
+    try:
+        resp = requests.get(
+            f"http://ip-api.com/json/{ip}?fields=status,country,countryCode,regionName,city,isp",
+            timeout=3
+        )
+        data = resp.json()
+        if data.get('status') == 'success':
+            return {
+                'country': data.get('country', ''),
+                'countryCode': data.get('countryCode', ''),
+                'region': data.get('regionName', ''),
+                'city': data.get('city', ''),
+                'isp': data.get('isp', ''),
+                'ip': ip
+            }
+        return {}
+    except Exception as e:
+        logger.error(f"IP info error: {str(e)}")
+        return {}
+
+def ip_in_range(ip, ip_range):
+    try:
+        ip_obj = ipaddress.ip_address(ip)
+        start_ip = ipaddress.ip_address(ip_range[0])
+        end_ip = ipaddress.ip_address(ip_range[1])
+        return start_ip <= ip_obj <= end_ip
+    except ValueError:
+        return False
+
+def get_client_ip():
+    if 'X-Forwarded-For' in request.headers:
+        ips = request.headers['X-Forwarded-For'].split(',')
+        return ips[0].strip()
+    return request.remote_addr
+
+def send_telegram_message(text):
+    global last_telegram_send
+    
+    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+        return False
+    
+    now = time.time()
+    if now - last_telegram_send < 1:
+        time.sleep(1 - (now - last_telegram_send))
+    
+    last_telegram_send = time.time()
+    
+    try:
+        response = requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
+            json={
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": text,
+                "parse_mode": "HTML"
+            },
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        logger.error(f"Telegram send error: {str(e)}")
+        return False
+
 
 # Переводы
 translations = {
@@ -149,7 +228,10 @@ translations = {
 # Вспомогательные функции
 def get_ip_info(ip):
     try:
-        resp = requests.get(f"http://ip-api.com/json/{ip}?fields=status,country,countryCode,regionName,city,isp")
+        resp = requests.get(
+            f"http://ip-api.com/json/{ip}?fields=status,country,countryCode,regionName,city,isp",
+            timeout=3  # Правильное расположение timeout
+        )
         data = resp.json()
         if data.get('status') == 'success':
             return {
@@ -176,77 +258,92 @@ def get_client_ip():
         return request.headers['X-Forwarded-For'].split(',')[0].strip()
     return request.remote_addr
 
+# Проверка на частые сообщения
+
+last_telegram_send = 0
+
+# Улучшенная функция отправки в Telegram
 def send_telegram_message(text):
+    global last_telegram_send
+    
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
-        return
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    data = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": text,
-        "parse_mode": "HTML"
-    }
+        return False
+    
+    # Защита от слишком частых сообщений
+    now = time.time()
+    if now - last_telegram_send < 1:  # Не чаще 1 сообщения в секунду
+        time.sleep(1 - (now - last_telegram_send))
+    
+    last_telegram_send = time.time()
+    
     try:
-        requests.post(url, data=data, timeout=5)
+        response = requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
+            data={
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": text,
+                "parse_mode": "HTML"
+            },
+            timeout=15
+        )
+        response.raise_for_status()
+        return True
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Ошибка Telegram API: {str(e)}")
+        return False
     except Exception as e:
-        app.logger.error(f"Error sending Telegram message: {e}")
+        logger.error(f"Неожиданная ошибка при отправке в Telegram: {str(e)}")
+        return False
+
 
 # Middleware для защиты и логирования
 @app.before_request
-def protect_and_log():
+def security_checks():
     if request.path.startswith('/static/'):
         return
 
     ip = get_client_ip()
     now = time.time()
 
-    # Проверка по диапазонам IP
-    for ip_range in BLOCKED_RANGES:
-        if ip_in_range(ip, ip_range):
-            abort(403)
+    # Проверка блокированных диапазонов
+    if any(ip_in_range(ip, r) for r in BLOCKED_RANGES):
+        abort(403)
 
-    # Проверка, заблокирован ли IP и не истёк ли срок блокировки
-    blocked_until = blocked_ips.get(ip)
-    if blocked_until:
-        if blocked_until > now:
-            # IP ещё заблокирован
-            abort(403)
-        else:
-            # Время блокировки прошло — разблокируем IP
-            blocked_ips.pop(ip, None)
+    # Проверка временной блокировки
+    if ip in blocked_ips and blocked_ips[ip] > now:
+        abort(403)
+    elif ip in blocked_ips:
+        del blocked_ips[ip]
 
-    # Получаем список времен запросов для IP, очищаем устаревшие
+    # Rate limiting
     req_times = ip_request_times.get(ip, [])
     req_times = [t for t in req_times if now - t < WINDOW_SECONDS]
     req_times.append(now)
     ip_request_times[ip] = req_times
 
-    # Если количество запросов превысило лимит — блокируем IP
     if len(req_times) > MAX_REQUESTS:
         blocked_ips[ip] = now + BLOCK_TIME
         info = get_ip_info(ip)
         message = (
-            f"🚫 IP заблокирован за превышение лимита\n"
-            f"🕒 Время: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
-            f"📡 IP: <code>{info.get('ip', ip)}</code>\n"
-            f"🌍 Страна: {info.get('country', 'Unknown')}\n"
-            f"🏙️ Город: {info.get('city', 'Unknown')}\n"
-            f"🏢 Провайдер: {info.get('isp', 'Unknown')}\n"
-            f"📝 Запросов за {WINDOW_SECONDS} сек: {len(req_times)}"
+            f"🚫 IP blocked\n"
+            f"⏰ Time: {datetime.datetime.now():%Y-%m-%d %H:%M:%S}\n"
+            f"🌐 IP: {info.get('ip', ip)}\n"
+            f"📍 Location: {info.get('city', 'Unknown')}, {info.get('country', 'Unknown')}\n"
+            f"📊 Requests: {len(req_times)}/{MAX_REQUESTS}"
         )
         threading.Thread(target=send_telegram_message, args=(message,)).start()
-        abort(403)
+        abort(429)
 
-    # Логирование новых посещений, если путь не /log
+    # Логирование посещений
     global last_log_message
     if request.path != '/log':
-        ua = parse(request.headers.get('User-Agent', 'Unknown'))
+        ua = parse(request.headers.get('User-Agent', ''))
         log_message = (
-            f"🌐 Новый посетитель\n"
-            f"🕒 Время: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+            f"🌍 Новый посетитель\n"
             f"📡 IP: {ip}\n"
             f"🖥 OS: {ua.os.family}\n"
-            f"🌍 Browser: {ua.browser.family}\n"
-            f"📍 Страница: {request.path}"
+            f"🌐 Браузер: {ua.browser.family}\n"
+            f"🔗 Страница: {request.path}"
         )
         if log_message != last_log_message:
             last_log_message = log_message
@@ -423,16 +520,16 @@ def set_language(lang):
         session['lang'] = lang
     return redirect(request.referrer or url_for('index'))
 
-@app.before_first_request
-def check_redis_connection():
-    if redis_client:
-        try:
-            redis_client.ping()
-            app.logger.info("Redis подключен успешно")
-        except Exception as e:
-            app.logger.error(f"Ошибка подключения к Redis: {e}")
-    else:
-        app.logger.warning("Redis не используется (memory://)")
+@app.before_request
+def check_redis_on_start():
+    if not hasattr(app, 'redis_initialized'):
+        if redis_client:
+            try:
+                redis_client.ping()
+                app.logger.info("Redis connection established")
+            except Exception as e:
+                app.logger.error(f"Redis connection failed: {str(e)}")
+        app.redis_initialized = True
 
 @app.route('/log', methods=['POST'])
 def log():
@@ -463,4 +560,20 @@ def ratelimit_handler(e):
     return render_template('rate_limit.html'), 429
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Проверка обязательных настроек
+    if not app.secret_key or app.secret_key == 'super-secret-key':
+        app.logger.warning("Using default secret key - not secure for production!")
+    
+    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+        app.logger.warning("Telegram credentials not set - notifications disabled")
+    
+    try:
+        app.run(
+            debug=env == "development",
+            host='0.0.0.0', 
+            port=int(os.getenv('PORT', 5000)),
+            threaded=True
+        )
+    except Exception as e:
+        app.logger.error(f"Failed to start application: {str(e)}")
+        raise
