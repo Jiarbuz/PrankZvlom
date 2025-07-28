@@ -1,3 +1,4 @@
+
 import os
 import time
 import ipaddress
@@ -15,27 +16,13 @@ from flask_limiter.util import get_remote_address
 from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
 
-BLOCKED_IPS = {
-    '185.80.53.13',
-    '104.28.192.94',
-    'none2',
-    'none3',
-    'none4'
-}
-
-# Загрузка переменных окружения
 load_dotenv()
 
-# Инициализация Flask
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'super-secret-key')
 app.config['BABEL_DEFAULT_LOCALE'] = 'ru'
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1)
 
-# Настройка Redis
-redis_client = Redis(host='localhost', port=6379)
-
-# Настройки сессии и безопасности
 app.config.update(
     SESSION_COOKIE_SECURE=True,
     SESSION_COOKIE_HTTPONLY=True,
@@ -43,11 +30,33 @@ app.config.update(
     PERMANENT_SESSION_LIFETIME=timedelta(days=1),
 )
 
-# Настройка лимитера
+# Определяем окружение
+env = os.getenv("FLASK_ENV", "development")
+
+if env == "production":
+    redis_url = "redis://red-d23qvvumcj7s739luqo0:uB5xnzFoWjSAJSlF7gozCjARDba0Fhdt@red-d23qvvumcj7s739luqo0:6379"
+else:
+    redis_url = "redis://localhost:6379"
+
+def check_redis(url):
+    try:
+        r = Redis.from_url(url)
+        r.ping()
+        return True
+    except Exception:
+        return False
+
+if not check_redis(redis_url):
+    redis_url = "memory://"
+
+redis_client = None
+if redis_url != "memory://":
+    redis_client = Redis.from_url(redis_url)
+
 limiter = Limiter(
     key_func=get_remote_address,
     app=app,
-    storage_uri="redis://red-d23qvvumcj7s739luqo0:uB5xnzFoWjSAJSlF7gozCjARDba0Fhdt@red-d23qvvumcj7s739luqo0:6379",
+    storage_uri=redis_url,
     default_limits=["200 per day", "50 per hour"]
 )
 
@@ -187,25 +196,31 @@ def protect_and_log():
     if request.path.startswith('/static/'):
         return
 
-    # Проверка блокировки IP
     ip = get_client_ip()
+    now = time.time()
+
+    # Проверка по диапазонам IP
     for ip_range in BLOCKED_RANGES:
         if ip_in_range(ip, ip_range):
             abort(403)
 
-    # Rate limiting
-    now = time.time()
+    # Проверка, заблокирован ли IP и не истёк ли срок блокировки
     blocked_until = blocked_ips.get(ip)
-    if blocked_until and blocked_until > now:
-        abort(403)
-    elif blocked_until:
-        blocked_ips.pop(ip, None)
+    if blocked_until:
+        if blocked_until > now:
+            # IP ещё заблокирован
+            abort(403)
+        else:
+            # Время блокировки прошло — разблокируем IP
+            blocked_ips.pop(ip, None)
 
+    # Получаем список времен запросов для IP, очищаем устаревшие
     req_times = ip_request_times.get(ip, [])
     req_times = [t for t in req_times if now - t < WINDOW_SECONDS]
     req_times.append(now)
     ip_request_times[ip] = req_times
 
+    # Если количество запросов превысило лимит — блокируем IP
     if len(req_times) > MAX_REQUESTS:
         blocked_ips[ip] = now + BLOCK_TIME
         info = get_ip_info(ip)
@@ -221,7 +236,7 @@ def protect_and_log():
         threading.Thread(target=send_telegram_message, args=(message,)).start()
         abort(403)
 
-    # Логирование посещений (исключаем страницу /log из логирования)
+    # Логирование новых посещений, если путь не /log
     global last_log_message
     if request.path != '/log':
         ua = parse(request.headers.get('User-Agent', 'Unknown'))
@@ -407,6 +422,17 @@ def set_language(lang):
     if lang in ['ru', 'en']:
         session['lang'] = lang
     return redirect(request.referrer or url_for('index'))
+
+@app.before_first_request
+def check_redis_connection():
+    if redis_client:
+        try:
+            redis_client.ping()
+            app.logger.info("Redis подключен успешно")
+        except Exception as e:
+            app.logger.error(f"Ошибка подключения к Redis: {e}")
+    else:
+        app.logger.warning("Redis не используется (memory://)")
 
 @app.route('/log', methods=['POST'])
 def log():
