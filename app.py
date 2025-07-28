@@ -156,7 +156,7 @@ def send_telegram_message(text):
                 "text": text,
                 "parse_mode": "HTML"
             },
-            timeout=10
+            timeout=15
         )
         response.raise_for_status()
         return True
