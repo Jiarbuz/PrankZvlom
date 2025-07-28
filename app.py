@@ -12,6 +12,7 @@ from flask_babel import Babel
 from flask_limiter import Limiter
 from flask import jsonify
 from flask_limiter.util import get_remote_address
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 # Загрузка переменных окружения
 load_dotenv()
@@ -19,6 +20,7 @@ load_dotenv()
 # Инициализация Flask
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'super-secret-key')
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1)
 
 # Настройка защиты от DDoS
 limiter = Limiter(
@@ -286,7 +288,7 @@ def log_visitor_info():
     if request.path.startswith('/static/'):
         return
 
-    ip = request.remote_addr
+    ip = get_client_ip()
     ua = parse(request.headers.get('User-Agent', 'Unknown'))
     now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -305,6 +307,16 @@ def log_visitor_info():
 
     last_log_message = message
     threading.Thread(target=send_telegram_message, args=(message,)).start()
+
+
+def get_client_ip():
+    # Попытка взять IP из заголовка X-Forwarded-For (если прокси настроен)
+    if 'X-Forwarded-For' in request.headers:
+        # В заголовке может быть несколько IP, берём первый (реальный клиентский)
+        ip = request.headers['X-Forwarded-For'].split(',')[0].strip()
+    else:
+        ip = request.remote_addr
+    return ip
 
 # Обработчик ошибки 429
 @app.errorhandler(429)
