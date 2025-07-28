@@ -466,46 +466,25 @@ def index():
                 {
                     "name": "саня шпалин", 
                     "url": "https://t.me/sanya_shpalka",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-22_03-52-56.md.jpg"
+                    "avatar": "https://i.ibb.co/kVpDJYr6/photo-2025-07-29-04-56-12.jpg"
                 },
                 {
                     "name": "пряниковий манiяк", 
                     "url": "https://t.me/apect0bah_3a_cnam",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/28/photo_2025-07-11_22-38-54.jpg"
+                    "avatar": "https://i.ibb.co/gbcg8v05/photo-2025-07-11-22-38-54.jpg"
                 },
                 {
                     "name": "ὙperBoreia", 
                     "url": "https://t.me/antikoks",
-                    "avatar": "https://i.ibb.co/RT7sjHWY/photo-2025-07-27-18-51-08.jpg"
+                    "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-27_18-51-08.jpg"
                 },
                 {
                     "name": "Алексей Проктолог [ ПРОКТОЛОГИЯ ]", 
                     "url": "https://t.me/alexey_proktolog",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/28/photo_2025-07-24_02-53-41.md.jpg"
-                }
-            ],
-            t['junior_mods']: [
-                {
-                    "name": "j17", 
-                    "url": "https://t.me/j17s",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-20_00-29-14.jpg"
-                }
-            ],
-            t['junior_jr']: [
-                {
-                    "name": "Zxc", 
-                    "url": "https://t.me/Zxc2",
-                    "avatar": None
+                    "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-24_02-53-41-3.jpg"
                 }
             ]
         },
-        "partners": [
-            {
-                "name": t['partner_owl'],
-                "url": "https://youtu.be/dQw4w9WgXcQ",
-                "avatar": "https://cdn-icons-png.flaticon.com/512/8890/8890972.png"
-            }
-        ],
         "translations": t
     }
     return render_template('index.html', data=site_data, current_lang=lang)

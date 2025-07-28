@@ -173,3 +173,165 @@
 2025-07-29 04:44:46,917 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "GET / HTTP/1.1" 200 -
 2025-07-29 04:44:46,956 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
 2025-07-29 04:44:46,957 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 04:44:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 05:21:22,180 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:21:22,209 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 05:21:22,209 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 05:21:22,213 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:21:25,272 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:21:25,307 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:21:25,316 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:21:25,839 - app - INFO - Redis connection established
+2025-07-29 05:21:25,871 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:25] "GET / HTTP/1.1" 200 -
+2025-07-29 05:21:25,933 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:25] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 05:21:25,933 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:25] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 05:21:26,070 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:26] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:21:26,071 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:26] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 05:21:27,500 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:27] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 05:21:27,927 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:27] "POST /log HTTP/1.1" 200 -
+2025-07-29 05:21:28,145 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:28] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-29 05:21:28,153 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:28] "[32mGET /set_language/ru HTTP/1.1[0m" 302 -
+2025-07-29 05:21:28,162 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:28] "GET / HTTP/1.1" 200 -
+2025-07-29 05:21:28,204 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:21:28,207 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:21:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 05:22:01,950 - werkzeug - INFO -  * Detected change in '/mnt/c/Users/User/Desktop/prankzvon/app.py', reloading
+2025-07-29 05:22:02,002 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:22:04,842 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:22:04,871 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:22:04,873 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:23:07,292 - app - INFO - Redis connection established
+2025-07-29 05:23:07,326 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:07] "GET / HTTP/1.1" 200 -
+2025-07-29 05:23:07,355 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:07] "[33mGET /none HTTP/1.1[0m" 404 -
+2025-07-29 05:23:07,362 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:23:07,363 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:07] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 05:23:07,580 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:07] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 05:23:07,799 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:23:08,691 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:23:16,456 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:16] "GET / HTTP/1.1" 200 -
+2025-07-29 05:23:16,487 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:16] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 05:23:16,543 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:16] "[33mGET /none HTTP/1.1[0m" 404 -
+2025-07-29 05:23:16,549 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:16] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:23:16,552 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:16] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 05:23:16,626 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:16] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 05:23:16,878 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:23:17,882 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:23:20,880 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:23:20] "POST /log HTTP/1.1" 200 -
+2025-07-29 05:23:30,333 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:24:39,654 - werkzeug - INFO -  * Detected change in '/mnt/c/Users/User/Desktop/prankzvon/app.py', reloading
+2025-07-29 05:24:39,715 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:25:41,169 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:25:44,406 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:25:44,438 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:25:44,448 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:25:44,919 - app - INFO - Redis connection established
+2025-07-29 05:25:44,952 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:25:44] "GET / HTTP/1.1" 200 -
+2025-07-29 05:25:44,973 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:25:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:25:44,974 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:25:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:25:44,980 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:25:44] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:25:44,988 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:25:44] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:25:45,242 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:25:45] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 05:25:51,873 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:28:25,066 - werkzeug - INFO -  * Detected change in '/mnt/c/Users/User/Desktop/prankzvon/app.py', reloading
+2025-07-29 05:28:25,129 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:28:28,578 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:28:28,611 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:28:28,613 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:28:29,084 - app - INFO - Redis connection established
+2025-07-29 05:28:29,117 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:29] "GET / HTTP/1.1" 200 -
+2025-07-29 05:28:29,137 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:28:29,137 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:28:29,145 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:29] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:28:29,148 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:29] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:28:29,567 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:29] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:28:33,676 - app - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:28:36,787 - werkzeug - INFO -  * Detected change in '/mnt/c/Users/User/Desktop/prankzvon/app.py', reloading
+2025-07-29 05:28:36,843 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:28:39,958 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:28:39,989 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:28:39,991 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:28:52,589 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:28:52,622 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.230.10:5000
+2025-07-29 05:28:52,622 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 05:28:52,626 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:28:56,127 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:28:56,158 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:28:56,160 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:28:56,631 - app - INFO - Redis connection established
+2025-07-29 05:28:56,648 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:56] "GET / HTTP/1.1" 200 -
+2025-07-29 05:28:56,667 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:28:56,667 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:28:56,674 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:56] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:28:56,678 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:56] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:28:56,763 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:28:56] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:28:57,071 - __main__ - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:29:39,496 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:39] "GET / HTTP/1.1" 200 -
+2025-07-29 05:29:39,512 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:39] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:29:39,517 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:29:39,518 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:29:39,525 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:39] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:29:39,530 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:39] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:29:40,053 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:29:40] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:30:14,730 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "GET / HTTP/1.1" 200 -
+2025-07-29 05:30:14,746 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:30:14,748 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:30:14,753 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:30:14,755 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:30:14,761 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:30:14,997 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:30:14] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:32:16,449 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:32:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:32:16,461 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:32:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-29 05:32:16,867 - __main__ - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:32:58,914 - werkzeug - INFO -  * Detected change in '/mnt/c/Users/User/Desktop/prankzvon/app.py', reloading
+2025-07-29 05:32:58,995 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:33:01,911 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:33:01,944 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:33:01,954 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:33:02,352 - app - INFO - Redis connection established
+2025-07-29 05:33:02,369 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "GET / HTTP/1.1" 200 -
+2025-07-29 05:33:02,384 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:33:02,395 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:33:02,396 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:33:02,405 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:33:02,410 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:33:02,898 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:02] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:33:04,370 - __main__ - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:33:50,223 - werkzeug - INFO -  * Detected change in '/mnt/c/Users/User/Desktop/prankzvon/app.py', reloading
+2025-07-29 05:33:50,280 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:33:53,114 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:33:53,144 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:33:53,146 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:33:53,514 - app - INFO - Redis connection established
+2025-07-29 05:33:53,531 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "GET / HTTP/1.1" 200 -
+2025-07-29 05:33:53,552 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:33:53,553 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:33:53,556 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:33:53,561 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:33:53,567 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:33:53,779 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:33:53] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:33:59,833 - __main__ - ERROR - Ошибка Telegram API: 429 Client Error: Too Many Requests for url: https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage
+2025-07-29 05:34:59,518 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "GET / HTTP/1.1" 200 -
+2025-07-29 05:34:59,536 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:34:59,540 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:34:59,540 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:34:59,547 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:34:59,552 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:34:59,768 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:34:59] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-07-29 05:35:00,881 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-29 05:35:00,887 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[32mGET /set_language/en HTTP/1.1[0m" 302 -
+2025-07-29 05:35:00,895 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "GET / HTTP/1.1" 200 -
+2025-07-29 05:35:00,912 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:35:00,915 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:35:00,918 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:35:00,923 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:35:00,927 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:00] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:35:10,503 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-29 05:35:10,512 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[32mGET /set_language/ru HTTP/1.1[0m" 302 -
+2025-07-29 05:35:10,519 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "GET / HTTP/1.1" 200 -
+2025-07-29 05:35:10,539 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[33mGET /static/avatars/avatar1.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:35:10,540 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:35:10,544 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:35:10,548 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:35:10,554 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
