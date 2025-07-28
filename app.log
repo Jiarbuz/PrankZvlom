@@ -335,3 +335,22 @@
 2025-07-29 05:35:10,544 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
 2025-07-29 05:35:10,548 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
 2025-07-29 05:35:10,554 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:35:10] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:48:02,370 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:48:02,402 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.230.10:5000
+2025-07-29 05:48:02,402 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 05:48:02,406 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 05:48:05,806 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 05:48:05,838 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 05:48:05,840 - werkzeug - INFO -  * Debugger PIN: 937-730-078
+2025-07-29 05:48:06,201 - app - INFO - Redis connection established
+2025-07-29 05:48:06,202 - app - INFO - Redis connection established
+2025-07-29 05:48:06,244 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "GET / HTTP/1.1" 200 -
+2025-07-29 05:48:06,248 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "GET / HTTP/1.1" 200 -
+2025-07-29 05:48:06,278 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-29 05:48:06,280 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-29 05:48:06,286 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 05:48:06,363 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-29 05:48:06,470 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 05:48:06] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
