@@ -132,11 +132,11 @@ def index():
             "title": t['info_title'],
             "description": t['disclaimer'],
             "links": [
-                {"name": t['links']['official_channel'], "url": "https://t.me/+_dzIExBP_yViZDk9"},
+                {"name": t['links']['official_channel'], "url": "https://t.me/+K7nGKPBpyIswMDhi"},
                 {"name": t['links']['redirect'], "url": "https://t.me/prankzvon"},
                 {"name": t['links']['chat'], "url": "https://t.me/+gUAplPwH9GhiMDg1"},
-                {"name": t['links']['tutorial'], "url": "https://t.me/+1ZZKZBWjTHxjMDQ8"},
-                {"name": t['links']['audio'], "url": "https://t.me/+Y77I8AtvLNM0OGUy"},
+                {"name": t['links']['tutorial'], "url": "https://t.me/+8dU6v546c3JiODc8"},
+                {"name": t['links']['audio'], "url": "https://t.me/+Egx6krEx0zM3NTRl"},
                 {"name": t['links']['bot'], "url": "https://t.me/prankvzlomnewbot"},
                 {"name": t['links']['tiktok'], "url": "https://www.tiktok.com/@jiarbuz"},
                 {"name": t['links']['support'], "url": "https://t.me/PrankVzlomUnban"}
