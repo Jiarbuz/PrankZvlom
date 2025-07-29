@@ -551,8 +551,6 @@ def check_redis_on_start():
                 app.logger.error(f"Redis connection failed: {str(e)}")
         app.redis_initialized = True
 
-Не давай лучше оставим лог но просто закроем его
-
 @app.route('/log', methods=['POST'])
 def log():
     data = request.get_json()
