@@ -102,8 +102,17 @@ last_log_message = None
 last_telegram_send = 0
 
 # Безопасность
-BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
-blocked_ips = {"146.120.227.186"}
+BLOCKED_RANGES = [
+    ("104.16.0.0", "104.31.255.255")
+]
+
+# Точные IP, которым запрещён доступ
+blocked_ips = {
+    "146.120.227.186",
+    "117.250.3.58",
+    "82.130.202.219"
+}
+
 ip_request_times = {}
 MAX_REQUESTS = 30
 WINDOW_SECONDS = 30
