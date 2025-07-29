@@ -1,4 +1,52 @@
+// Отдельный модуль для отправки логов (можно вынести в отдельный файл sendLog.js)
+export async function sendLogToTelegram(message, token) {
+    try {
+        const response = await fetch('/log', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Access-Token': token // Временный токен для проверки доступа
+            },
+            body: JSON.stringify({ message })
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Ошибка при отправке лога: ${response.status} ${response.statusText} — ${errorText}`);
+        }
+    } catch (err) {
+        console.error(err);
+        alert(`Ошибка при отправке лога: ${err.message}`);
+    }
+}
+
+// Основной скрипт
 document.addEventListener('DOMContentLoaded', function() {
+    const ACCESS_TOKEN = getAccessToken(); // Получаем токен из cookie или sessionStorage
+
+    // --- Проверка доступа для логов ---
+    function getAccessToken() {
+        // Пример получения токена из cookie
+        const match = document.cookie.match(/(^| )access_token=([^;]+)/);
+        return match ? match[2] : null;
+    }
+
+    // --- Проверка блокировки сторонних скриптов ---
+    function detectScriptBlocking() {
+        // Пример проверки: проверим, есть ли fetch и console.log
+        if (typeof fetch !== 'function') {
+            console.warn('Fetch API заблокирован');
+            alert('Обнаружена блокировка скриптов — некоторые функции могут не работать.');
+        }
+        if (typeof console === 'undefined' || typeof console.log !== 'function') {
+            console.warn('Консоль заблокирована');
+            alert('Обнаружена блокировка консоли — некоторые ошибки не будут показаны.');
+        }
+        // Можно добавить больше детекторов по необходимости
+    }
+
+    detectScriptBlocking();
+
     // --- Модальное окно дисклеймера ---
     const modal = document.getElementById('disclaimerModal');
     if (sessionStorage.getItem('disclaimerAccepted') === 'true') {
@@ -8,18 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Отправка логов через серверный эндпоинт ---
-    function sendLogToTelegram(message) {
-        fetch('/log', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message })
-        })
-        .then(response => {
-            if (!response.ok) {
-                console.error('😢 Ошибка при отправке лога на сервер');
-            }
-        })
-        .catch(err => console.error('Ошибка fetch:', err));
+    async function sendLog(message) {
+        if (!ACCESS_TOKEN) {
+            console.warn('Нет доступа для отправки логов (токен отсутствует)');
+            return;
+        }
+        await sendLogToTelegram(message, ACCESS_TOKEN);
     }
 
     // --- Событие принятия дисклеймера ---
@@ -28,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         acceptBtn.addEventListener('click', function() {
             if (modal) modal.style.display = 'none';
             sessionStorage.setItem('disclaimerAccepted', 'true');
-            sendLogToTelegram('✅ Пользователь принял дисклеймер');
+            sendLog('✅ Пользователь принял дисклеймер');
         });
     }
 
@@ -37,9 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabContents = document.querySelectorAll('.tab-content');
     let currentTabIndex = 0;
 
-    if (tabButtons[0]) {
-        tabButtons[0].classList.add('active');
-    }
+    if (tabButtons[0]) tabButtons[0].classList.add('active');
 
     function switchTab(index) {
         if (index === currentTabIndex) return;

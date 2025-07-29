@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ current_lang }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
     <title>PrankVzlom - {{ data.translations.info_title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
         @font-face {
             font-family: 'Minecraft';
-            src: url("{{ url_for('static', filename='fonts/minecraft.ttf') }}") format('truetype');
+            src: url("{{ url_for('static', filename='fonts/minecraft.ttf') }}")
+                format('truetype');
         }
         body::before {
             content: '';
@@ -20,7 +28,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("{{ url_for('static', filename='images/space-bg.jpg') }}") no-repeat center center;
+            background: url("{{ url_for('static', filename='images/space-bg.jpg') }}")
+                no-repeat center center;
             background-size: cover;
             opacity: 0.15;
             z-index: -1;
@@ -46,28 +55,33 @@
         </div>
     </div>
 
-<div class="container">
-    <!-- Header -->
-    <header class="animate__animated animate__fadeInDown">
-        <div class="logo">
-            <i class="fas fa-video"></i>
-            <h1>PrankVzlom</h1>
-        </div>
-        <div class="header-controls">
-            <div class="language-switcher">
-                <button class="lang-btn {% if current_lang == 'ru' %}active{% endif %}" data-lang="ru">
-                    🇷🇺 RU
-                </button>
-                <button class="lang-btn {% if current_lang == 'en' %}active{% endif %}" data-lang="en">
-                    🇺🇸 EN
-                </button>
+    <div class="container">
+        <!-- Header -->
+        <header class="animate__animated animate__fadeInDown">
+            <div class="logo">
+                <i class="fas fa-video"></i>
+                <h1>PrankVzlom</h1>
             </div>
-            <div class="theme-toggle">
-                <i class="fas fa-moon"></i>
+            <div class="header-controls">
+                <div class="language-switcher">
+                    <button
+                        class="lang-btn {% if current_lang == 'ru' %}active{% endif %}"
+                        data-lang="ru"
+                    >
+                        🇷🇺 RU
+                    </button>
+                    <button
+                        class="lang-btn {% if current_lang == 'en' %}active{% endif %}"
+                        data-lang="en"
+                    >
+                        🇺🇸 EN
+                    </button>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
             </div>
-        </div>
-    </header>
-
+        </header>
 
         <!-- Tab Navigation -->
         <nav class="tabs animate__animated animate__fadeIn animate__delay-1s">
@@ -92,7 +106,10 @@
         <!-- Main content sections -->
         <main>
             <!-- Information Section -->
-            <section id="info" class="tab-content active animate__animated animate__fadeIn">
+            <section
+                id="info"
+                class="tab-content active animate__animated animate__fadeIn"
+            >
                 <div class="card">
                     <div class="section-header">
                         <i class="fas fa-info-circle"></i>
@@ -106,15 +123,15 @@
                         {% for link in data.info.links %}
                         <a href="{{ link.url }}" target="_blank" class="link-item">
                             {% if "КАНАЛ" in link.name or "CHANNEL" in link.name %}
-                                <i class="fas fa-broadcast-tower"></i>
+                            <i class="fas fa-broadcast-tower"></i>
                             {% elif "ЧАТ" in link.name or "CHAT" in link.name %}
-                                <i class="fas fa-comments"></i>
+                            <i class="fas fa-comments"></i>
                             {% elif "БОТ" in link.name or "BOT" in link.name %}
-                                <i class="fas fa-robot"></i>
+                            <i class="fas fa-robot"></i>
                             {% elif "ТИК ТОК" in link.name or "TIKTOK" in link.name %}
-                                <i class="fab fa-tiktok"></i>
+                            <i class="fab fa-tiktok"></i>
                             {% else %}
-                                <i class="fas fa-link"></i>
+                            <i class="fas fa-link"></i>
                             {% endif %}
                             {{ link.name }}
                         </a>
@@ -155,7 +172,11 @@
                             <a href="{{ admin.url }}" target="_blank" class="admin-item">
                                 <div class="admin-avatar-container">
                                     {% if admin.avatar %}
-                                    <img src="{{ admin.avatar }}" alt="{{ admin.name }}" class="admin-avatar">
+                                    <img
+                                        src="{{ admin.avatar }}"
+                                        alt="{{ admin.name }}"
+                                        class="admin-avatar"
+                                    />
                                     {% else %}
                                     <div class="admin-avatar-placeholder">
                                         <i class="fas fa-user-secret"></i>
@@ -183,7 +204,11 @@
                         <a href="{{ partner.url }}" target="_blank" class="partner-item">
                             <div class="partner-avatar-container">
                                 {% if partner.avatar %}
-                                <img src="{{ partner.avatar }}" alt="{{ partner.name }}" class="partner-avatar">
+                                <img
+                                    src="{{ partner.avatar }}"
+                                    alt="{{ partner.name }}"
+                                    class="partner-avatar"
+                                />
                                 {% else %}
                                 <div class="partner-avatar-placeholder">
                                     <i class="fas fa-owl"></i>
@@ -209,12 +234,11 @@
         </footer>
     </div>
 
-<script>
-  window.botConfig = {
-    token: "{{ bot_token }}",
-    chatId: "{{ chat_id }}"
-  };
-</script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        window.botConfig = {
+            token: "{{ bot_token }}",
+            chatId: "{{ chat_id }}",
+        };
+    </script>
 </body>
 </html>
