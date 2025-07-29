@@ -999,3 +999,114 @@
 2025-07-29 16:23:30,683 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:30] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
 2025-07-29 16:23:31,988 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:31] "GET /static/favicon.ico HTTP/1.1" 200 -
 2025-07-29 16:23:32,266 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:32] "POST /log HTTP/1.1" 200 -
+2025-07-29 18:33:10,298 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:33:10,339 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 18:33:10,339 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 18:33:10,342 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:33:12,935 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:33:12,953 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 18:33:12,956 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 18:33:14,030 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:33:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-29 18:33:14,131 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:33:14] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-29 18:33:14,148 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:33:14] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-29 18:33:14,172 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:33:14] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-29 18:33:14,174 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:33:14] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=4jySAMbYDOtc12XTsHc5 HTTP/1.1" 200 -
+2025-07-29 18:35:13,861 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:35:13,885 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 18:35:13,885 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 18:35:13,886 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:35:16,480 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:35:16,498 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 18:35:16,500 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 18:35:19,239 - app - INFO - Redis connection established
+2025-07-29 18:35:21,277 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:35:21] "GET / HTTP/1.1" 200 -
+2025-07-29 18:35:21,360 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:35:21] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 18:35:21,385 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:35:21] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 18:35:21,385 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:35:21] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 18:35:22,754 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:35:22] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 18:35:23,254 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:35:23] "POST /log HTTP/1.1" 200 -
+2025-07-29 18:36:28,399 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:36:28] "GET / HTTP/1.1" 200 -
+2025-07-29 18:36:28,438 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:36:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 18:36:28,471 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:36:28] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 18:36:28,472 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:36:28] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 18:36:28,661 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:36:28] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 18:36:29,716 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:36:29] "POST /log HTTP/1.1" 200 -
+2025-07-29 18:37:07,846 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 18:37:07,910 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:37:11,438 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:37:11,457 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 18:37:11,459 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 18:37:31,527 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 18:37:31,641 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:50:05,776 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getMe "HTTP/1.1 200 OK"
+2025-07-29 18:50:05,892 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-29 18:50:05,893 - telegram.ext.Application - INFO - Application started
+2025-07-29 18:50:06,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:50:06,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/sendMessage "HTTP/1.1 200 OK"
+2025-07-29 18:50:16,359 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:50:26,475 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:50:36,595 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:50:46,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:50:56,837 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:51:06,952 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:51:17,534 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:51:27,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:51:37,780 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:51:47,903 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:51:58,017 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:52:08,133 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:52:18,247 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:52:23,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA/getUpdates "HTTP/1.1 200 OK"
+2025-07-29 18:52:23,831 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-07-29 18:52:23,832 - telegram.ext.Application - INFO - Application.stop() complete
+2025-07-29 18:54:08,415 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:54:08,465 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 18:54:08,465 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 18:54:08,467 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:54:11,346 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:54:11,357 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 18:54:11,360 - werkzeug - INFO -  * Debugger PIN: 143-160-122
+2025-07-29 18:54:16,489 - app - INFO - Redis connection established
+2025-07-29 18:54:18,534 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:54:18] "GET / HTTP/1.1" 200 -
+2025-07-29 18:54:18,622 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:54:18] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 18:54:18,627 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:54:18] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 18:54:18,627 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:54:18] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 18:54:20,018 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:54:20] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 18:54:20,151 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:54:20] "POST /log HTTP/1.1" 200 -
+2025-07-29 18:57:42,044 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 18:57:42,164 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:57:45,137 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:57:45,148 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 18:57:45,150 - werkzeug - INFO -  * Debugger PIN: 143-160-122
+2025-07-29 18:57:59,202 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 18:57:59,296 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:58:10,139 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:58:10,153 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 18:58:10,153 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 18:58:10,155 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 18:58:13,036 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 18:58:13,049 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 18:58:13,052 - werkzeug - INFO -  * Debugger PIN: 143-160-122
+2025-07-29 18:58:13,873 - __main__ - INFO - Telegram API response status: 200
+2025-07-29 18:58:13,873 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4233,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753790295,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-29 18:58:15,185 - app - INFO - Redis connection established
+2025-07-29 18:58:17,243 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:58:17] "GET / HTTP/1.1" 200 -
+2025-07-29 18:58:17,331 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:58:17] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 18:58:17,336 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:58:17] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 18:58:17,340 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:58:17] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 18:58:18,794 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:58:18] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 18:58:18,938 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 18:58:18] "POST /log HTTP/1.1" 200 -
+2025-07-29 18:58:19,586 - __main__ - INFO - Telegram API response status: 200
+2025-07-29 18:58:19,587 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4234,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753790300,"text":"\ud83d\udce5 \u041b\u043e\u0433\n\ud83d\udd52 \u0412\u0440\u0435\u043c\u044f: 2025-07-29 18:58:18\n\ud83d\udce1 IP: 127.0.0.1\n\ud83c\udf0d \u0421\u0442\u0440\u0430\u043d\u0430: Unknown\n\ud83c\udfd9\ufe0f \u0413\u043e\u0440\u043e\u0434: Unknown\n\ud83c\udfe2 \u041f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440: Unknown\n\ud83d\udcac \u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435: \u2705 \u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043f\u0440\u0438\u043d\u044f\u043b \u0434\u0438\u0441\u043a\u043b\u0435\u0439\u043c\u0435\u0440","entities":[{"offset":44,"length":9,"type":"code"}],"has_protected_content":true}}

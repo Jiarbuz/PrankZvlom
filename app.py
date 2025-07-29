@@ -5,7 +5,11 @@ import requests
 import datetime
 import threading
 import logging
+import json
 from datetime import timedelta
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from flask import request, abort
+from telegram import Update
 from functools import lru_cache
 from flask import Response, url_for
 from flask import Flask, render_template, request, session, redirect, url_for, abort, jsonify
@@ -29,11 +33,18 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 load_dotenv()
+ 
+# Айпишники
+BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
 
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'super-secret-key')
 app.config['BABEL_DEFAULT_LOCALE'] = 'ru'
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1)
+
+BLOCKED_IPS_FILE = "blocked_ips.json"
+BLOCK_DURATION = 6 * 3600  # 6 часов
+blocked_ips = {}
 
 app.config.update(
     SESSION_COOKIE_SECURE=True,
@@ -50,6 +61,33 @@ redis_url = (
     if env == "production"
     else "redis://localhost:6379"
 )
+
+# Команды тг
+
+TOKEN = "8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA"
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Привет! Я бот.")
+
+# Уведы Тг
+@app.before_request
+def check_blocked_ip():
+    load_blocked_ips()  # Загружаем каждый раз — чтобы не перезапускать сервер
+    ip = request.remote_addr
+    if ip in blocked_ips:
+        send_block_notification(ip)
+        abort(403)
+
+def send_block_notification(ip):
+    import requests
+    token = "8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA"
+    chat_id = "6330358945"
+    msg = f"🚨 Заблокированный IP `{ip}` попытался зайти!"
+    requests.post(f"https://api.telegram.org/bot{token}/sendMessage", data={
+        "chat_id": chat_id,
+        "text": msg,
+        "parse_mode": "Markdown"
+    })
 
 # Авто смена языка
 @app.before_request
@@ -102,16 +140,20 @@ last_log_message = None
 last_telegram_send = 0
 
 # Безопасность
-BLOCKED_RANGES = [
-    ("104.16.0.0", "104.31.255.255")
-]
 
-# Точные IP, которым запрещён доступ
-blocked_ips = {
-    "146.120.227.186",
-    "117.250.3.58",
-    "82.130.202.219"
-}
+
+def load_blocked_ips():
+    global blocked_ips
+    try:
+        with open(BLOCKED_IPS_FILE, "r") as f:
+            data = json.load(f)
+            now = time.time()
+            # Удаляем просроченные
+            blocked_ips = {
+                ip: t for ip, t in data.items() if now - t < BLOCK_DURATION
+            }
+    except Exception:
+        blocked_ips = {}
 
 ip_request_times = {}
 MAX_REQUESTS = 30
@@ -151,9 +193,9 @@ def ip_in_range(ip, ip_range):
         return False
 
 def get_client_ip():
-    if 'X-Forwarded-For' in request.headers:
-        ips = request.headers['X-Forwarded-For'].split(',')
-        return ips[0].strip()
+    x_forwarded_for = request.headers.get('X-Forwarded-For')
+    if x_forwarded_for:
+        return x_forwarded_for.split(',')[0].strip()
     return request.remote_addr
 
 def send_telegram_message(text):
@@ -280,41 +322,37 @@ def get_client_ip():
         return request.headers['X-Forwarded-For'].split(',')[0].strip()
     return request.remote_addr
 
-# Проверка на частые сообщения
-
-last_telegram_send = 0
-
 # Улучшенная функция отправки в Telegram
 def send_telegram_message(text):
     global last_telegram_send
-    
+
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+        logger.warning("Telegram credentials not set - message not sent")
         return False
-    
-    # Защита от слишком частых сообщений
+
     now = time.time()
-    if now - last_telegram_send < 1:  # Не чаще 1 сообщения в секунду
-        time.sleep(1 - (now - last_telegram_send))
-    
+    elapsed = now - last_telegram_send
+    if elapsed < 1:
+        time.sleep(1 - elapsed)
+
     last_telegram_send = time.time()
-    
+
     try:
         response = requests.post(
             f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
-            data={
+            json={
                 "chat_id": TELEGRAM_CHAT_ID,
                 "text": text,
                 "parse_mode": "HTML"
             },
             timeout=15
         )
+        logger.info(f"Telegram API response status: {response.status_code}")
+        logger.info(f"Telegram API response text: {response.text}")
         response.raise_for_status()
         return True
-    except requests.exceptions.RequestException as e:
-        logger.error(f"Ошибка Telegram API: {str(e)}")
-        return False
     except Exception as e:
-        logger.error(f"Неожиданная ошибка при отправке в Telegram: {str(e)}")
+        logger.error(f"Telegram send error: {str(e)}")
         return False
 
 
@@ -592,21 +630,5 @@ def add_cache_headers(response):
         response.headers['Cache-Control'] = 'public, max-age=60'  # кэшируем главную страницу на 1 минуту
     return response
 
-if __name__ == '__main__':
-    # Проверка обязательных настроек
-    if not app.secret_key or app.secret_key == 'super-secret-key':
-        app.logger.warning("Using default secret key - not secure for production!")
-    
-    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
-        app.logger.warning("Telegram credentials not set - notifications disabled")
-    
-    try:
-        app.run(
-            debug=env == "development",
-            host='0.0.0.0', 
-            port=int(os.getenv('PORT', 5000)),
-            threaded=True
-        )
-    except Exception as e:
-        app.logger.error(f"Failed to start application: {str(e)}")
-        raise
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
