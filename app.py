@@ -51,6 +51,17 @@ redis_url = (
     else "redis://localhost:6379"
 )
 
+# Авто смена языка
+@app.before_request
+def auto_set_lang():
+    if 'lang' not in session:
+        ip = get_client_ip()
+        info = get_ip_info(ip)
+        if info.get('countryCode') == 'RU':
+            session['lang'] = 'ru'
+        else:
+            session['lang'] = 'en'
+
 def check_redis(url):
     try:
         r = Redis.from_url(url)
@@ -567,6 +578,15 @@ def log():
 @app.errorhandler(429)
 def ratelimit_handler(e):
     return render_template('rate_limit.html'), 429
+
+@app.after_request
+def add_cache_headers(response):
+    path = request.path
+    if path.startswith('/static/'):
+        response.headers['Cache-Control'] = 'public, max-age=31536000'  # 1 год
+    elif path in ['/', '/home']:
+        response.headers['Cache-Control'] = 'public, max-age=60'  # кэшируем главную страницу на 1 минуту
+    return response
 
 if __name__ == '__main__':
     # Проверка обязательных настроек

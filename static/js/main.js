@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabContents = document.querySelectorAll('.tab-content');
     let currentTabIndex = 0;
 
+    if (tabButtons[0]) {
+        tabButtons[0].classList.add('active');
+    }
+
     function switchTab(index) {
         if (index === currentTabIndex) return;
 
@@ -76,11 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Переключение языка с перезагрузкой страницы ---
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(button => {
-    button.addEventListener('click', function() {
-    const lang = this.getAttribute('data-lang');
-    window.location.href = `/change_language/${lang}`;
-  });
-});
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            window.location.href = `/change_language/${lang}`;
+        });
+    });
 
     // --- Переключение темы с плавной сменой CSS переменных ---
     const themeToggle = document.querySelector('.theme-toggle');
@@ -159,10 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.card, footer').forEach(el => observer.observe(el));
 });
-
-if (tabButtons[index]) {
-    tabButtons[index].classList.add('active');
-}
 
 // --- Прелоадер — скрытие по загрузке страницы ---
 window.addEventListener("load", () => {
