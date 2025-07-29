@@ -551,11 +551,10 @@ def check_redis_on_start():
                 app.logger.error(f"Redis connection failed: {str(e)}")
         app.redis_initialized = True
 
+Не давай лучше оставим лог но просто закроем его
+
 @app.route('/log', methods=['POST'])
 def log():
-    if request.remote_addr != '127.0.0.1':
-        abort(403)  # Запрещаем всем, кроме localhost
-
     data = request.get_json()
     message = data.get('message')
     if not message:
