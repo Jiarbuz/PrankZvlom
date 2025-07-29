@@ -425,3 +425,20 @@
 2025-07-29 13:30:19,868 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:30:19] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
 2025-07-29 13:30:21,260 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:30:21] "GET /static/favicon.ico HTTP/1.1" 200 -
 2025-07-29 13:30:21,967 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:30:21] "[31m[1mPOST /log HTTP/1.1[0m" 403 -
+2025-07-29 13:44:04,563 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 13:44:04,586 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 13:44:04,586 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 13:44:04,587 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 13:44:07,171 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 13:44:07,192 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 13:44:07,195 - werkzeug - INFO -  * Debugger PIN: 289-539-384
+2025-07-29 13:44:09,585 - app - INFO - Redis connection established
+2025-07-29 13:44:11,640 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "GET / HTTP/1.1" 200 -
+2025-07-29 13:44:11,739 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 13:44:11,744 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 13:44:11,748 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 13:44:11,771 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 13:44:12,801 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:12] "GET /static/favicon.ico HTTP/1.1" 200 -

@@ -47,7 +47,9 @@ app.config.update(
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY') or os.getenv('SECRET_KEY')
 
 # Лог
-LOG_SECRET_KEY = os.getenv('LOG_SECRET_KEY', 'default_key')
+LOG_SECRET_KEY = os.getenv('LOG_SECRET_KEY')
+if not LOG_SECRET_KEY:
+    raise RuntimeError("LOG_SECRET_KEY is not set in environment variables!")
 
 @app.route('/log', methods=['POST'])
 def log_endpoint():
