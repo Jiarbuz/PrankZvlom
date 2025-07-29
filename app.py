@@ -36,7 +36,7 @@ load_dotenv()
 BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
 BLOCKED_IPS_FILE = "blocked_ips.json"
 BLOCK_DURATION = 6 * 3600  # 6 часов
-blocked_ips = {}
+blocked_ips = {"117.250.3.58"}
 ip_request_times = {}
 MAX_REQUESTS = 30
 WINDOW_SECONDS = 30
