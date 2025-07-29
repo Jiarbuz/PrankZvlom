@@ -375,9 +375,9 @@ def index():
             "description": t['disclaimer'],
             "links": [
                 {"name": t['links']['official_channel'], "url": "https://t.me/+K7nGKPBpyIswMDhi"},
-                {"name": t['links']['redirect'], "url": "https://t.me/prankzvon"},
+                {"name": t['links']['redirect'], "url": "https://t.me/PrankVZ"},
                 {"name": t['links']['chat'], "url": "https://t.me/+gUAplPwH9GhiMDg1"},
-                {"name": t['links']['tutorial'], "url": "https://t.me/+8dU6v546c3JiODc8"},
+                {"name": t['links']['tutorial'], "url": "https://t.me/+cpSOIonR_4cwMWEx"},
                 {"name": t['links']['audio'], "url": "https://t.me/+Egx6krEx0zM3NTRl"},
                 {"name": t['links']['bot'], "url": "https://t.me/prankvzlomnewbot"},
                 {"name": t['links']['tiktok'], "url": "https://www.tiktok.com/@jiarbuz"},
