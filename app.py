@@ -103,7 +103,7 @@ last_telegram_send = 0
 
 # Безопасность
 BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
-blocked_ips = {}
+blocked_ips = {"146.120.227.186"}
 ip_request_times = {}
 MAX_REQUESTS = 30
 WINDOW_SECONDS = 30
