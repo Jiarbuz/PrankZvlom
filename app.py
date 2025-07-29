@@ -394,108 +394,103 @@ def index():
             {"name": "MVFPS", "url": "https://cloud.mail.ru/public/26ae/58VrzdvYT"},
             {"name": "KPortScan", "url": "https://cloud.mail.ru/public/yrup/9PQyDe86G"}
         ],
-        "admins": {
-            t['main_admin']: [
-                {
-                    "name": "Православный Бес", 
-                    "url": "https://t.me/bes689",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_06-19-13.jpg"
-                }
-            ],
-            t['creators']: [
-                {
-                    "name": "Everyday", 
-                    "url": "https://t.me/mobile_everyday",
-                    "avatar": "https://i.ibb.co/spKRJcmK/photo-2025-05-23-16-45-24.jpg"
-                },
-                {
-                    "name": "Андрей", 
-                    "url": "https://t.me/prankzvon231",
-                    "avatar": None
-                },
-                {
-                    "name": "Lucper", 
-                    "url": "https://t.me/lucper1",
-                    "avatar": "https://i.ibb.co/TMbSG0jp/photo-2025-07-20-01-44-45-2.gif"
-                }
-            ],
-            t['senior_admins']: [
-                {
-                    "name": "Диванный воин Кчау", 
-                    "url": "https://t.me/bestanov",
-                    "avatar": "https://i.ibb.co/rKLcJ70c/photo-2025-04-23-02-37-37.jpg"
-                },
-                {
-                    "name": "JIARBUZ.exe", 
-                    "url": "https://t.me/jiarbuz",
-                    "avatar": "https://i.ibb.co/kgBVDqM8/photo-2025-06-10-15-16-39.jpg"
-                },
-                {
-                    "name": "ximi13p", 
-                    "url": "https://t.me/ximi13p",
-                    "avatar": None
-                }
-            ],
-            t['junior_admins']: [
-                {
-                    "name": "k3stovski", 
-                    "url": "https://t.me/k3stovski",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-24_23-01-05.jpg"
-                },
-                {
-                    "name": "kronaфacia", 
-                    "url": "https://t.me/kronaphasia",
-                    "avatar": None
-                },
-                {
-                    "name": "Жук", 
-                    "url": "https://t.me/werwse",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-23_22-07-41.md.jpg"
-                },
-                {
-                    "name": "Цыфра", 
-                    "url": "https://t.me/himera_unturned",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-01_00-52-02.md.jpg"
-                },
-                {
-                    "name": "Наполеонский пистолэт", 
-                    "url": "https://t.me/prnkzvn",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-20_04-28-28.jpg"
-                }
-            ],
-            t['senior_mods']: [
-                {
-                    "name": "Paul Du Rove", 
-                    "url": "tg://openmessage?user_id=7401067755",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-05-03_16-27-45.jpg"
-                },
-                {
-                    "name": "aiocryp", 
-                    "url": "https://t.me/aiocryp",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_00-37-50.jpg"
-                },
-                {
-                    "name": "саня шпалин", 
-                    "url": "https://t.me/sanya_shpalka",
-                    "avatar": "https://i.ibb.co/kVpDJYr6/photo-2025-07-29-04-56-12.jpg"
-                },
-                {
-                    "name": "пряниковий манiяк", 
-                    "url": "https://t.me/apect0bah_3a_cnam",
-                    "avatar": "https://i.ibb.co/gbcg8v05/photo-2025-07-11-22-38-54.jpg"
-                },
-                {
-                    "name": "ὙperBoreia", 
-                    "url": "https://t.me/antikoks",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-27_18-51-08.jpg"
-                },
-                {
-                    "name": "Алексей Проктолог [ ПРОКТОЛОГИЯ ]", 
-                    "url": "https://t.me/alexey_proktolog",
-                    "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-24_02-53-41-3.jpg"
-                }
-            ]
+"admins": {
+    t['main_admin']: [
+        {
+            "name": "Православный Бес", 
+            "url": "https://t.me/bes689",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_06-19-13.jpg"
+        }
+    ],
+    t['creators']: [
+        {
+            "name": "Everyday", 
+            "url": "https://t.me/mobile_everyday",
+            "avatar": "https://i.ibb.co/spKRJcmK/photo-2025-05-23-16-45-24.jpg"
         },
+        {
+            "name": "Андрей", 
+            "url": "https://t.me/prankzvon231",
+            "avatar": None
+        },
+        {
+            "name": "Lucper", 
+            "url": "https://t.me/lucper1",
+            "avatar": "https://i.ibb.co/TMbSG0jp/photo-2025-07-20-01-44-45-2.gif"
+        }
+    ],
+    t['senior_admins']: [
+        {
+            "name": "Диванный воин Кчау", 
+            "url": "https://t.me/bestanov",
+            "avatar": "https://i.ibb.co/rKLcJ70c/photo-2025-04-23-02-37-37.jpg"
+        },
+        {
+            "name": "JIARBUZ.exe", 
+            "url": "https://t.me/jiarbuz",
+            "avatar": "https://i.ibb.co/kgBVDqM8/photo-2025-06-10-15-16-39.jpg"
+        },
+        {
+            "name": "ximi13p", 
+            "url": "https://t.me/ximi13p",
+            "avatar": None
+        }
+    ],
+    t['junior_admins']: [
+        {
+            "name": "k3stovski", 
+            "url": "https://t.me/k3stovski",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-24_23-01-05.jpg"
+        },
+        {
+            "name": "Жук", 
+            "url": "https://t.me/werwse",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-23_22-07-41.md.jpg"
+        },
+        {
+            "name": "Цыфра", 
+            "url": "https://t.me/himera_unturned",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-01_00-52-02.md.jpg"
+        },
+        {
+            "name": "Алексей Проктолог [ ПРОКТОЛОГИЯ ]", 
+            "url": "https://t.me/alexey_proktolog",
+            "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-24_02-53-41-3.jpg"
+        },
+        {
+            "name": "Наполеонский пистолэт", 
+            "url": "https://t.me/prnkzvn",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-20_04-28-28.jpg"
+        }
+    ],
+    t['senior_mods']: [
+        {
+            "name": "Paul Du Rove", 
+            "url": "tg://openmessage?user_id=7401067755",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-05-03_16-27-45.jpg"
+        },
+        {
+            "name": "aiocryp", 
+            "url": "https://t.me/aiocryp",
+            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_00-37-50.jpg"
+        },
+        {
+            "name": "саня шпалин", 
+            "url": "https://t.me/sanya_shpalka",
+            "avatar": "https://i.ibb.co/kVpDJYr6/photo-2025-07-29-04-56-12.jpg"
+        },
+        {
+            "name": "пряниковий манiяк", 
+            "url": "https://t.me/apect0bah_3a_cnam",
+            "avatar": "https://i.ibb.co/gbcg8v05/photo-2025-07-11-22-38-54.jpg"
+        },
+        {
+            "name": "ὙperBoreia", 
+            "url": "https://t.me/antikoks",
+            "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-27_18-51-08.jpg"
+        },
+    ]
+},
         "translations": t
     }
     return render_template('index.html', data=site_data, current_lang=lang)

@@ -911,3 +911,91 @@
 2025-07-29 15:23:18,703 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 15:23:18] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
 2025-07-29 15:23:18,894 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 15:23:18] "GET /static/favicon.ico HTTP/1.1" 200 -
 2025-07-29 15:23:23,422 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 15:23:23] "POST /log HTTP/1.1" 200 -
+2025-07-29 15:37:07,342 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 15:37:07,368 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 15:37:07,368 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 15:37:07,369 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:11:39,288 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:11:39,312 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 16:11:39,312 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 16:11:39,314 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:11:41,886 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:11:41,904 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 16:11:41,906 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 16:11:44,553 - app - INFO - Redis connection established
+2025-07-29 16:11:46,598 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:11:46] "GET / HTTP/1.1" 200 -
+2025-07-29 16:11:46,702 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:11:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 16:11:46,710 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:11:46] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 16:11:46,711 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:11:46] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 16:11:47,981 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:11:47] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 16:11:48,449 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:11:48] "POST /log HTTP/1.1" 200 -
+2025-07-29 16:11:57,962 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 16:11:58,036 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:12:00,700 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:12:00,713 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 16:12:00,715 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 16:12:02,743 - app - INFO - Redis connection established
+2025-07-29 16:12:04,811 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:12:04] "GET / HTTP/1.1" 200 -
+2025-07-29 16:15:48,413 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 16:15:48,522 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:15:51,216 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:15:51,232 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 16:15:51,234 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 16:15:54,077 - app - INFO - Redis connection established
+2025-07-29 16:15:56,125 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:15:56] "GET / HTTP/1.1" 200 -
+2025-07-29 16:15:57,154 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:15:57] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 16:16:03,277 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 16:16:03,336 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:16:44,806 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:16:44,828 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 16:16:44,828 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 16:16:44,830 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:16:47,399 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:16:47,417 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 16:16:47,418 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 16:16:49,471 - app - INFO - Redis connection established
+2025-07-29 16:16:51,504 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:16:51] "GET / HTTP/1.1" 200 -
+2025-07-29 16:17:53,620 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 16:17:53,704 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:18:20,480 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:18:20,505 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 16:18:20,506 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 16:18:20,507 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:18:23,068 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:18:23,083 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 16:18:23,085 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 16:18:25,114 - app - INFO - Redis connection established
+2025-07-29 16:18:27,152 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:18:27] "GET / HTTP/1.1" 200 -
+2025-07-29 16:18:27,222 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:18:27] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 16:18:27,224 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:18:27] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 16:19:14,239 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 16:19:14,313 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:23:20,257 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:23:20,282 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 16:23:20,283 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 16:23:20,284 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 16:23:22,971 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 16:23:22,992 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 16:23:22,993 - werkzeug - INFO -  * Debugger PIN: 130-064-223
+2025-07-29 16:23:28,541 - app - INFO - Redis connection established
+2025-07-29 16:23:30,573 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:30] "GET / HTTP/1.1" 200 -
+2025-07-29 16:23:30,668 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:30] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 16:23:30,677 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:30] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 16:23:30,683 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:30] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 16:23:31,988 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:31] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 16:23:32,266 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 16:23:32] "POST /log HTTP/1.1" 200 -
