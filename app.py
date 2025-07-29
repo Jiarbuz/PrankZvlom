@@ -444,7 +444,7 @@ def index():
         },
         {
             "name": "Жук", 
-            "url": "https://t.me/werwse",
+            "url": "https://t.me/Sova_ingram",
             "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-23_22-07-41.md.jpg"
         },
         {
