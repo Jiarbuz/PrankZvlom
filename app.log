@@ -442,3 +442,21 @@
 2025-07-29 13:44:11,748 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "GET /static/css/style.css HTTP/1.1" 200 -
 2025-07-29 13:44:11,771 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:11] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
 2025-07-29 13:44:12,801 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:44:12] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 13:50:43,480 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 13:50:43,503 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 13:50:43,504 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 13:50:43,505 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 13:50:46,059 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 13:50:46,081 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 13:50:46,083 - werkzeug - INFO -  * Debugger PIN: 289-539-384
+2025-07-29 13:50:48,332 - app - INFO - Redis connection established
+2025-07-29 13:50:50,375 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:50:50] "GET / HTTP/1.1" 200 -
+2025-07-29 13:50:50,495 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:50:50] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 13:50:50,502 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:50:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 13:50:50,522 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:50:50] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 13:50:50,529 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:50:50] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 13:50:51,734 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:50:51] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 13:51:25,546 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 13:51:25] "[31m[1mPOST /log HTTP/1.1[0m" 403 -

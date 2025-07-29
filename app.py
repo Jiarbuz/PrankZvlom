@@ -412,7 +412,7 @@ def index():
             {"name": "Nesca", "url": "https://cloud.mail.ru/public/J2sJ/3vuy7XC1n"},
             {"name": "Noon", "url": "https://cloud.mail.ru/public/4Cmj/yMeVGQXE6"},
             {"name": "Ingram", "url": "https://cloud.mail.ru/public/nPCQ/JA73sB4tq"},
-            {"name": "SoundPad", "url": "https://mega.nz/file/Ck4jhZBL#bXmvrKCquhJrt2hMlHiV2QfpzMm3uj_lLjv9yFLEjgA"},
+            {"name": "SoundPad", "url": "https://cloud.mail.ru/public/aFgC/FVg56TJqH"},
             {"name": "iVMS-4200", "url": "https://cloud.mail.ru/public/8t1M/g5zfvA8Lq"},
             {"name": "MVFPS", "url": "https://cloud.mail.ru/public/26ae/58VrzdvYT"},
             {"name": "KPortScan", "url": "https://cloud.mail.ru/public/yrup/9PQyDe86G"}
