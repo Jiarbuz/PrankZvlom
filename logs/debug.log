@@ -1,0 +1,24 @@
+[2025-07-29 16:40:32] Telegram URL: https://api.telegram.org/bot8251275057:AAHyU0EZ3O0xr2MC8A5KgOH8JzizkAwuAnw/sendMessage
+Payload: Array
+(
+    [chat_id] => -1002796496801
+    [text] => 🛡️ <b>Лог с сайта</b>
+🌍 IP: <code>127.0.0.1</code>
+📍 Страна: Unknown (--)
+📱 UA: curl/8.13.0
+💬 Сообщение: 💥 Привет с PHP!
+    [parse_mode] => HTML
+)
+
+[2025-07-29 16:45:09] Telegram URL: https://api.telegram.org/bot8251275057:AAHyU0EZ3O0xr2MC8A5KgOH8JzizkAwuAnw/sendMessage
+Payload: Array
+(
+    [chat_id] => -1002796496801
+    [text] => 🛡️ <b>Лог с сайта</b>
+🌍 IP: <code>127.0.0.1</code>
+📍 Страна: Unknown (--)
+📱 UA: curl/8.13.0
+💬 Сообщение: 💥 Привет с PHP!
+    [parse_mode] => HTML
+)
+

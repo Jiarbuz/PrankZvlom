@@ -6,11 +6,9 @@ import datetime
 import threading
 import logging
 import json
-from datetime import timedelta
 from flask import Flask, request, abort, session, jsonify, render_template, redirect, url_for
-from datetime import datetime
+from datetime import datetime, timedelta
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-from flask import Flask, request, abort, session, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from user_agents import parse
@@ -36,11 +34,15 @@ load_dotenv()
 BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
 BLOCKED_IPS_FILE = "blocked_ips.json"
 BLOCK_DURATION = 6 * 3600  # 6 часов
-blocked_ips = {"117.250.3.58"}
+blocked_ips = {}
 ip_request_times = {}
 MAX_REQUESTS = 30
 WINDOW_SECONDS = 30
 BLOCK_TIME = 3600
+
+# --- Логгер ---
+LOGGER_URL = "https://yourdomain.com/logger.php"  # замените на реальный URL
+LOGGER_ACCESS_TOKEN = os.getenv("LOGGER_ACCESS_TOKEN")
 
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'super-secret-key')
@@ -484,27 +486,32 @@ def check_redis_on_start():
 
 @app.route('/log', methods=['POST'])
 def log():
-    data = request.get_json()
-    message = data.get('message')
-    if not message:
-        return jsonify({'error': 'No message provided'}), 400
+    try:
+        data = request.get_json()
+        message = data.get('message')
+        if not message:
+            return jsonify({'error': 'No message provided'}), 400
 
-    ip = get_client_ip()
-    now = datetime.datetime.now()
-    info = get_ip_info(ip)
+        ip = get_client_ip()
+        now = datetime.datetime.now()
+        info = get_ip_info(ip)
 
-    text = (
-        f"📥 Лог\n"
-        f"🕒 Время: {now.strftime('%Y-%m-%d %H:%M:%S')}\n"
-        f"📡 IP: <code>{info.get('ip', ip)}</code>\n"
-        f"🌍 Страна: {info.get('country', 'Unknown')}\n"
-        f"🏙️ Город: {info.get('city', 'Unknown')}\n"
-        f"🏢 Провайдер: {info.get('isp', 'Unknown')}\n"
-        f"💬 Сообщение: {message}"
-    )
+        text = (
+            f"📥 Лог\n"
+            f"🕒 Время: {now.strftime('%Y-%m-%d %H:%M:%S')}\n"
+            f"📡 IP: <code>{info.get('ip', ip)}</code>\n"
+            f"🌍 Страна: {info.get('country', 'Unknown')}\n"
+            f"🏙️ Город: {info.get('city', 'Unknown')}\n"
+            f"🏢 Провайдер: {info.get('isp', 'Unknown')}\n"
+            f"💬 Сообщение: {message}"
+        )
 
-    threading.Thread(target=send_telegram_message, args=(text,)).start()
-    return jsonify({'status': 'ok'}), 200
+        threading.Thread(target=send_telegram_message, args=(text,)).start()
+        return jsonify({'status': 'ok'}), 200
+
+    except Exception as e:
+        app.logger.error(f"Error in /log: {e}", exc_info=True)
+        return jsonify({'error': 'Internal Server Error'}), 500
 
 @app.errorhandler(429)
 def ratelimit_handler(e):

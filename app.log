@@ -1273,3 +1273,80 @@
 2025-07-29 21:46:41,725 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 21:46:41] "GET / HTTP/1.1" 200 -
 2025-07-29 21:46:41,772 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 21:46:41] "GET /static/js/main.js HTTP/1.1" 200 -
 2025-07-29 21:46:41,977 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 21:46:41] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 22:12:34,416 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 22:12:34,433 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 22:12:34,433 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 22:12:34,435 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 22:12:37,308 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 22:12:37,319 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 22:12:37,322 - werkzeug - INFO -  * Debugger PIN: 143-160-122
+2025-07-29 22:12:41,084 - __main__ - INFO - Telegram API response status: 200
+2025-07-29 22:12:41,084 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4469,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753801961,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-29 22:12:42,419 - app - INFO - Redis connection established
+2025-07-29 22:12:44,475 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 22:12:44] "GET / HTTP/1.1" 200 -
+2025-07-29 22:12:44,583 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 22:12:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 22:12:44,598 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 22:12:44] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 22:12:44,606 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 22:12:44] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 22:12:44,607 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 22:12:44] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 22:12:45,672 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 22:12:45] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 23:56:03,278 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 23:56:03,303 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 23:56:03,304 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 23:56:03,305 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 23:56:06,152 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 23:56:06,162 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 23:56:06,164 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-29 23:56:07,905 - __main__ - INFO - Telegram API response status: 400
+2025-07-29 23:56:07,905 - __main__ - INFO - Telegram API response text: {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-07-29 23:56:07,906 - __main__ - ERROR - Telegram send error: 400 Client Error: Bad Request for url: https://api.telegram.org/bot8251275057:AAEb2Xt_v4eJUuM3H1FCDvU6yqAwd5H2WlY/sendMessage
+2025-07-29 23:56:09,294 - app - INFO - Redis connection established
+2025-07-29 23:56:11,368 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:56:11] "GET / HTTP/1.1" 200 -
+2025-07-29 23:56:11,495 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:56:11] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 23:56:11,526 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:56:11] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 23:56:11,529 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:56:11] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 23:56:11,548 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:56:11] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 23:56:12,562 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:56:12] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 23:57:30,755 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 23:57:30,773 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-29 23:57:30,773 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-29 23:57:30,774 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 23:57:33,642 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 23:57:33,653 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 23:57:33,655 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-29 23:57:34,290 - __main__ - INFO - Telegram API response status: 200
+2025-07-29 23:57:34,290 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4478,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753808255,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-29 23:57:35,684 - app - INFO - Redis connection established
+2025-07-29 23:57:37,729 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:37] "GET / HTTP/1.1" 200 -
+2025-07-29 23:57:38,091 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:38] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 23:57:53,932 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:53] "GET / HTTP/1.1" 200 -
+2025-07-29 23:57:54,002 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:54] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 23:57:54,002 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 23:57:54,046 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:54] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 23:57:54,049 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:54] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 23:57:54,237 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:57:54] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-29 23:58:04,469 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:04] "GET / HTTP/1.1" 200 -
+2025-07-29 23:58:04,515 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:04] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-29 23:58:04,519 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:04] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-29 23:58:04,537 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:04] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-29 23:58:04,628 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:04] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-29 23:58:05,131 - __main__ - INFO - Telegram API response status: 200
+2025-07-29 23:58:05,131 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4479,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753808285,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Chrome\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-29 23:58:19,956 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-29 23:58:20,047 - werkzeug - INFO -  * Restarting with stat
+2025-07-29 23:58:23,071 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-29 23:58:23,087 - werkzeug - WARNING -  * Debugger is active!
+2025-07-29 23:58:23,089 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-29 23:58:24,804 - __main__ - INFO - Telegram API response status: 200
+2025-07-29 23:58:24,805 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4480,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753808305,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-29 23:58:26,219 - app - INFO - Redis connection established
+2025-07-29 23:58:28,250 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:28] "GET / HTTP/1.1" 200 -
+2025-07-29 23:58:29,469 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:29] "GET / HTTP/1.1" 200 -
