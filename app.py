@@ -2,12 +2,11 @@ import os
 import time
 import ipaddress
 import requests
-import datetime
 import threading
 import logging
 import json
 from flask import Flask, request, abort, session, jsonify, render_template, redirect, url_for
-from datetime import datetime, timedelta
+from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -15,7 +14,7 @@ from user_agents import parse
 from redis import Redis
 from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
-from telegram import Update
+from datetime import datetime, timedelta  
 
 # --- Настройка логирования ---
 logging.basicConfig(
@@ -213,8 +212,7 @@ def security_checks():
         blocked_ips[ip] = now + BLOCK_TIME
         info = get_ip_info(ip)
         message = (
-            f"🚫 IP заблокирован\n"
-            f"⏰ Время: {datetime.datetime.now():%Y-%m-%d %H:%M:%S}\n"
+            f"⏰ Время: {now:%Y-%m-%d %H:%M:%S}\n"
             f"🌐 IP: {info.get('ip', ip)}\n"
             f"📍 Локация: {info.get('city', 'Unknown')}, {info.get('country', 'Unknown')}\n"
             f"📊 Запросов: {len(req_times)}/{MAX_REQUESTS}"
@@ -493,7 +491,7 @@ def log():
             return jsonify({'error': 'No message provided'}), 400
 
         ip = get_client_ip()
-        now = datetime.datetime.now()
+        now = datetime.now()
         info = get_ip_info(ip)
 
         text = (

@@ -1350,3 +1350,97 @@
 2025-07-29 23:58:26,219 - app - INFO - Redis connection established
 2025-07-29 23:58:28,250 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:28] "GET / HTTP/1.1" 200 -
 2025-07-29 23:58:29,469 - werkzeug - INFO - 127.0.0.1 - - [29/Jul/2025 23:58:29] "GET / HTTP/1.1" 200 -
+2025-07-30 00:14:41,206 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:14:41,225 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 00:14:41,225 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 00:14:41,226 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 00:14:44,045 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:14:44,073 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 00:14:44,076 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 00:14:46,420 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 00:14:46,420 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4493,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753809287,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 00:14:47,750 - app - INFO - Redis connection established
+2025-07-30 00:14:49,775 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:14:49] "GET / HTTP/1.1" 200 -
+2025-07-30 00:14:49,872 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:14:49] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 00:14:49,893 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:14:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 00:14:49,894 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:14:49] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 00:14:49,911 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:14:49] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 00:14:50,140 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:14:50] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 00:15:30,245 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:15:30] "GET / HTTP/1.1" 200 -
+2025-07-30 00:15:30,357 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:15:30] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 00:15:30,361 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:15:30] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 00:15:30,620 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:15:30] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 00:15:30,916 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 00:15:30,916 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4494,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753809331,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 00:15:31,706 - app - ERROR - Error in /log: type object 'datetime.datetime' has no attribute 'datetime'
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\prankzvon\app.py", line 495, in log
+    now = datetime.datetime.now()
+          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-07-30 00:15:31,707 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:15:31] "[35m[1mPOST /log HTTP/1.1[0m" 500 -
+2025-07-30 00:16:36,619 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 00:16:36,760 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 00:17:02,209 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:17:02,226 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 00:17:02,226 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 00:17:02,228 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 00:17:05,041 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:17:05,054 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 00:17:05,056 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 00:17:06,300 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 00:17:06,300 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4499,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753809427,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 00:17:07,703 - app - INFO - Redis connection established
+2025-07-30 00:17:09,739 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:17:09] "GET / HTTP/1.1" 200 -
+2025-07-30 00:17:09,831 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:17:09] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 00:17:09,870 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:17:09] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 00:17:10,089 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:17:10] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 00:17:11,588 - app - ERROR - Error in /log: type object 'datetime.datetime' has no attribute 'datetime'
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\prankzvon\app.py", line 495, in log
+    now = datetime.datetime.now()
+          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-07-30 00:17:11,590 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:17:11] "[35m[1mPOST /log HTTP/1.1[0m" 500 -
+2025-07-30 00:18:26,222 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:18:26,239 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 00:18:26,239 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 00:18:26,241 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 00:22:45,061 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:22:45,082 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 00:22:45,082 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 00:22:45,084 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 00:22:47,862 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 00:22:47,878 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 00:22:47,880 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 00:22:50,353 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 00:22:50,353 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4505,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753809771,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 00:22:51,678 - app - INFO - Redis connection established
+2025-07-30 00:22:53,723 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:22:53] "GET / HTTP/1.1" 200 -
+2025-07-30 00:22:53,823 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:22:53] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 00:22:53,843 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:22:53] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 00:22:53,843 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:22:53] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 00:22:53,862 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:22:53] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 00:22:55,196 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:22:55] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 00:23:07,611 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:23:07] "GET / HTTP/1.1" 200 -
+2025-07-30 00:23:07,667 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:23:07] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 00:23:07,706 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:23:07] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 00:23:07,707 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:23:07] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 00:23:07,904 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:23:07] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 00:23:08,329 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 00:23:08,329 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4506,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753809789,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 00:23:09,400 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 00:23:09] "POST /log HTTP/1.1" 200 -
+2025-07-30 00:23:10,031 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 00:23:10,031 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":4507,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753809790,"text":"\ud83d\udce5 \u041b\u043e\u0433\n\ud83d\udd52 \u0412\u0440\u0435\u043c\u044f: 2025-07-30 00:23:08\n\ud83d\udce1 IP: 192.168.31.100\n\ud83c\udf0d \u0421\u0442\u0440\u0430\u043d\u0430: Unknown\n\ud83c\udfd9\ufe0f \u0413\u043e\u0440\u043e\u0434: Unknown\n\ud83c\udfe2 \u041f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440: Unknown\n\ud83d\udcac \u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435: \u2705 \u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043f\u0440\u0438\u043d\u044f\u043b \u0434\u0438\u0441\u043a\u043b\u0435\u0439\u043c\u0435\u0440","entities":[{"offset":44,"length":14,"type":"code"}],"has_protected_content":true}}
