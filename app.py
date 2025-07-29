@@ -5,6 +5,7 @@ import requests
 import datetime
 import threading
 import logging
+from flask import abort
 from datetime import timedelta
 from functools import lru_cache
 from flask import Response, url_for
@@ -41,6 +42,26 @@ app.config.update(
     SESSION_COOKIE_SAMESITE='Lax',
     PERMANENT_SESSION_LIFETIME=timedelta(days=1),
 )
+
+# Конфиги из .env
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY') or os.getenv('SECRET_KEY')
+
+# Лог
+LOG_SECRET_KEY = os.getenv('LOG_SECRET_KEY', 'default_key')
+
+@app.route('/log', methods=['POST'])
+def log_endpoint():
+    secret = request.headers.get('X-LOG-KEY') or request.args.get('key')
+    if secret != LOG_SECRET_KEY:
+        abort(403)  # Запрещаем доступ без правильного ключа
+
+    data = request.json
+    message = data.get('message', '') if data else ''
+
+    # Обработка сообщения лога (например, отправка в телегу, запись в файл и т.п.)
+    logger.info(f"LOG MESSAGE: {message}")
+
+    return jsonify({"status": "ok"})
 
 
 # Конфигурация Redis
