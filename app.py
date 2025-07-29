@@ -5,7 +5,6 @@ import requests
 import datetime
 import threading
 import logging
-from flask import abort
 from datetime import timedelta
 from functools import lru_cache
 from flask import Response, url_for
@@ -42,28 +41,6 @@ app.config.update(
     SESSION_COOKIE_SAMESITE='Lax',
     PERMANENT_SESSION_LIFETIME=timedelta(days=1),
 )
-
-# Конфиги из .env
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY') or os.getenv('SECRET_KEY')
-
-# Лог
-LOG_SECRET_KEY = os.getenv('LOG_SECRET_KEY')
-if not LOG_SECRET_KEY:
-    raise RuntimeError("LOG_SECRET_KEY is not set in environment variables!")
-
-@app.route('/log', methods=['POST'])
-def log_endpoint():
-    secret = request.headers.get('X-LOG-KEY') or request.args.get('key')
-    if secret != LOG_SECRET_KEY:
-        abort(403)  # Запрещаем доступ без правильного ключа
-
-    data = request.json
-    message = data.get('message', '') if data else ''
-
-    # Обработка сообщения лога (например, отправка в телегу, запись в файл и т.п.)
-    logger.info(f"LOG MESSAGE: {message}")
-
-    return jsonify({"status": "ok"})
 
 
 # Конфигурация Redis
@@ -128,9 +105,9 @@ last_telegram_send = 0
 BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
 blocked_ips = {}
 ip_request_times = {}
-MAX_REQUESTS = 50
-WINDOW_SECONDS = 60
-BLOCK_TIME = 1800
+MAX_REQUESTS = 30
+WINDOW_SECONDS = 30
+BLOCK_TIME = 3600
 
 # Кэшированная функция получения IP информации
 @lru_cache(maxsize=1024)
@@ -412,7 +389,7 @@ def index():
             {"name": "Nesca", "url": "https://cloud.mail.ru/public/J2sJ/3vuy7XC1n"},
             {"name": "Noon", "url": "https://cloud.mail.ru/public/4Cmj/yMeVGQXE6"},
             {"name": "Ingram", "url": "https://cloud.mail.ru/public/nPCQ/JA73sB4tq"},
-            {"name": "SoundPad", "url": "https://cloud.mail.ru/public/aFgC/FVg56TJqH"},
+            {"name": "SoundPad", "url": "https://cloud.mail.ru/public/aFgC/FVg56TJqHs"},
             {"name": "iVMS-4200", "url": "https://cloud.mail.ru/public/8t1M/g5zfvA8Lq"},
             {"name": "MVFPS", "url": "https://cloud.mail.ru/public/26ae/58VrzdvYT"},
             {"name": "KPortScan", "url": "https://cloud.mail.ru/public/yrup/9PQyDe86G"}
@@ -576,6 +553,9 @@ def check_redis_on_start():
 
 @app.route('/log', methods=['POST'])
 def log():
+    if request.remote_addr != '127.0.0.1':
+        abort(403)  # Запрещаем всем, кроме localhost
+
     data = request.get_json()
     message = data.get('message')
     if not message:
