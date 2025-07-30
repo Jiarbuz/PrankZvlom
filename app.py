@@ -14,7 +14,8 @@ from user_agents import parse
 from redis import Redis
 from werkzeug.middleware.proxy_fix import ProxyFix
 from dotenv import load_dotenv
-from datetime import datetime, timedelta  
+from datetime import datetime, timedelta
+from functools import lru_cache
 
 # --- Настройка логирования ---
 logging.basicConfig(
@@ -29,18 +30,20 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-# --- Конфиги ---
+# --- Конфигурация ---
 BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
 BLOCKED_IPS_FILE = "blocked_ips.json"
 BLOCK_DURATION = 6 * 3600  # 6 часов
+
 blocked_ips = {}
 ip_request_times = {}
+
 MAX_REQUESTS = 10
 WINDOW_SECONDS = 30
-BLOCK_TIME = 3600
+BLOCK_TIME = 3600  # Время блокировки в секундах
 
-# --- Логгер ---
-LOGGER_URL = "https://yourdomain.com/logger.php"  # замените на реальный URL
+# --- Логгер URL и токен ---
+LOGGER_URL = "https://yourdomain.com/logger.php"  # заменить на реальный URL
 LOGGER_ACCESS_TOKEN = os.getenv("LOGGER_ACCESS_TOKEN")
 
 app = Flask(__name__)
@@ -61,7 +64,6 @@ redis_url = (
     else "redis://localhost:6379"
 )
 
-# --- Проверка Redis ---
 def check_redis(url):
     try:
         r = Redis.from_url(url)
@@ -80,7 +82,6 @@ else:
     redis_url = "memory://"
     logger.warning("Using memory storage as Redis is unavailable")
 
-# --- Ограничение частоты запросов ---
 limiter = Limiter(
     app=app,
     key_func=get_remote_address,
@@ -89,14 +90,12 @@ limiter = Limiter(
     strategy="fixed-window"
 )
 
-# --- Телеграм токены из окружения ---
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8430330790:AAG1YWeiP2f1GaLP4J6XEQ0FDjk0wlvRWWA")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "6330358945")
 
 last_telegram_send = 0
 last_log_message = None
 
-# --- Загрузка заблокированных IP из файла ---
 def load_blocked_ips():
     global blocked_ips
     try:
@@ -107,14 +106,12 @@ def load_blocked_ips():
     except Exception:
         blocked_ips = {}
 
-# --- Получение IP клиента ---
 def get_client_ip():
     x_forwarded_for = request.headers.get('X-Forwarded-For')
     if x_forwarded_for:
         return x_forwarded_for.split(',')[0].strip()
     return request.remote_addr
 
-# --- Проверка, входит ли IP в диапазон ---
 def ip_in_range(ip, ip_range):
     try:
         ip_obj = ipaddress.ip_address(ip)
@@ -123,9 +120,6 @@ def ip_in_range(ip, ip_range):
         return start_ip <= ip_obj <= end_ip
     except ValueError:
         return False
-
-# --- Получение геоданных IP (с кешем) ---
-from functools import lru_cache
 
 @lru_cache(maxsize=1024)
 def get_ip_info(ip):
@@ -149,7 +143,6 @@ def get_ip_info(ip):
         logger.error(f"IP info error: {str(e)}")
         return {}
 
-# --- Отправка сообщения в Telegram с учётом задержек ---
 def send_telegram_message(text):
     global last_telegram_send
 
@@ -182,7 +175,6 @@ def send_telegram_message(text):
         logger.error(f"Telegram send error: {str(e)}")
         return False
 
-# --- Проверка блокированных IP и лимитов ---
 @app.before_request
 def security_checks():
     if request.path.startswith('/static/'):
@@ -192,17 +184,14 @@ def security_checks():
     ip = get_client_ip()
     now = time.time()
 
-    # Блокировка по диапазонам IP
     if any(ip_in_range(ip, r) for r in BLOCKED_RANGES):
         abort(403)
 
-    # Временная блокировка IP
     if ip in blocked_ips and blocked_ips[ip] > now:
         abort(403)
     elif ip in blocked_ips:
         del blocked_ips[ip]
 
-    # Ограничение запросов с IP
     req_times = ip_request_times.get(ip, [])
     req_times = [t for t in req_times if now - t < WINDOW_SECONDS]
     req_times.append(now)
@@ -212,7 +201,7 @@ def security_checks():
         blocked_ips[ip] = now + BLOCK_TIME
         info = get_ip_info(ip)
         message = (
-            f"⏰ Время: {now:%Y-%m-%d %H:%M:%S}\n"
+            f"⏰ Время: {datetime.fromtimestamp(now).strftime('%Y-%m-%d %H:%M:%S')}\n"
             f"🌐 IP: {info.get('ip', ip)}\n"
             f"📍 Локация: {info.get('city', 'Unknown')}, {info.get('country', 'Unknown')}\n"
             f"📊 Запросов: {len(req_times)}/{MAX_REQUESTS}"
@@ -220,7 +209,6 @@ def security_checks():
         threading.Thread(target=send_telegram_message, args=(message,)).start()
         abort(429)
 
-    # Логирование посещений
     global last_log_message
     if request.path != '/log':
         ua = parse(request.headers.get('User-Agent', ''))
@@ -528,4 +516,4 @@ def add_cache_headers(response):
 
 # --- Запуск ---
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
+    app.run(host="0.0.0.0", port=5000)

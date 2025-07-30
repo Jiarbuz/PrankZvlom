@@ -1,0 +1,44 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    root /var/www/html;
+    index check.html;
+
+    # 1. Если нет куки — редиректим на check.html
+    location / {
+        if ($http_cookie !~ "js_check=1") {
+            return 302 /check.html;
+        }
+        return 302 /verified/;
+    }
+
+    # 2. JS-чек: отдаем HTML + ресурсы
+    location = /check.html {
+        add_header Cache-Control "no-store";
+        try_files /check.html =404;
+    }
+
+    # 3. Защищённый доступ после проверки
+    location /verified/ {
+        if ($http_cookie !~ "js_check=1") {
+            return 302 /check.html;
+        }
+
+        proxy_pass http://127.0.0.1:5000/;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        add_header Cache-Control "no-store";
+    }
+
+    # 4. Статика (css, js, картинки и т.п.)
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|woff2?|ttf|svg)$ {
+        access_log off;
+        expires max;
+        root /var/www/html;
+    }
+}
