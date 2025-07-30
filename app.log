@@ -2382,3 +2382,84 @@ AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 2025-07-30 18:16:44,443 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5850,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874206,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/ru","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
 2025-07-30 18:16:45,551 - __main__ - INFO - Telegram API response status: 200
 2025-07-30 18:16:45,552 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5851,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874207,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:30:49,048 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:30:51,090 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:30:51,116 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:30:51,116 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:30:51,118 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:30:53,666 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:30:55,690 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:30:55,703 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:30:55,705 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:30:56,351 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:30:56,351 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5864,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753875058,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:30:57,724 - app - INFO - Redis connection established
+2025-07-30 18:30:59,775 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:30:59] "GET / HTTP/1.1" 200 -
+2025-07-30 18:30:59,910 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:30:59] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:30:59,911 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:30:59] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:30:59,947 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:30:59] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 18:31:00,898 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:31:00] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:31:01,397 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:31:01] "GET / HTTP/1.1" 200 -
+2025-07-30 18:33:24,894 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:33:26,940 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:33:26,956 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:33:26,956 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:33:26,958 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:33:29,518 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:33:31,530 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:33:31,542 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:33:31,544 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:33:32,213 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:33:32,214 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5867,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753875214,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:33:33,587 - app - INFO - Redis connection established
+2025-07-30 18:33:35,633 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:35] "GET / HTTP/1.1" 200 -
+2025-07-30 18:33:35,709 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:35] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:33:36,016 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:36] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:33:36,018 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:36] "GET / HTTP/1.1" 200 -
+2025-07-30 18:33:41,458 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:41] "GET / HTTP/1.1" 200 -
+2025-07-30 18:33:41,520 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:41] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:33:41,524 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:41] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 18:33:41,702 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:41] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 18:33:41,770 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:33:41] "GET / HTTP/1.1" 200 -
+2025-07-30 18:34:36,713 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:36] "GET / HTTP/1.1" 200 -
+2025-07-30 18:34:36,759 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:36] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:34:36,761 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:36] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:34:36,969 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:36] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:34:36,971 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:36] "GET / HTTP/1.1" 200 -
+2025-07-30 18:34:42,724 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:42] "GET / HTTP/1.1" 200 -
+2025-07-30 18:34:42,787 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 18:34:42,788 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:42] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 18:34:42,971 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:34:42] "GET / HTTP/1.1" 200 -
+2025-07-30 18:34:50,071 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:34:52,099 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:34:52,116 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 18:34:52,117 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:34:52,118 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:34:54,778 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:34:56,798 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:34:56,807 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:34:56,809 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:34:57,528 - app - INFO - Telegram API response status: 200
+2025-07-30 18:34:57,528 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5869,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753875299,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:34:58,831 - app - INFO - Redis connection established
+2025-07-30 18:35:00,879 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:00] "GET / HTTP/1.1" 200 -
+2025-07-30 18:35:00,985 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:00] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:35:01,001 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:01] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:35:01,164 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:01] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:35:01,165 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:01] "GET / HTTP/1.1" 200 -
+2025-07-30 18:35:04,598 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:04] "GET / HTTP/1.1" 200 -
+2025-07-30 18:35:04,643 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 18:35:04,643 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:04] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 18:35:04,821 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:04] "GET / HTTP/1.1" 200 -
+2025-07-30 18:35:10,008 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:10] "GET / HTTP/1.1" 200 -
+2025-07-30 18:35:10,085 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 18:35:10,087 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:10] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 18:35:10,144 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:10] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 18:35:10,317 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:35:10] "GET / HTTP/1.1" 200 -
