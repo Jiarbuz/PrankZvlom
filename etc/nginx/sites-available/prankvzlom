@@ -1,11 +1,34 @@
+# HTTP → HTTPS
 server {
     listen 80;
-    server_name localhost;
+    server_name prankzvon.ru www.prankzvon.ru;
 
+    return 301 https://$host$request_uri;
+}
+
+# HTTPS-сервер с защитой и прокси на Flask
+server {
+    listen 443 ssl;
+    server_name prankzvon.ru www.prankzvon.ru;
+
+    # SSL-сертификаты от Let's Encrypt
+    ssl_certificate /etc/letsencrypt/live/prankzvon.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/prankzvon.ru/privkey.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    # Безопасные заголовки
+    add_header X-Content-Type-Options nosniff;
+    add_header X-Frame-Options DENY;
+    add_header X-XSS-Protection "1; mode=block";
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+    # Корневая директория и индекс
     root /var/www/html;
     index check.html;
 
-    # 1. Если нет куки — редиректим на check.html
+    # 1. Проверка куки js_check — если нет, редирект на check.html
     location / {
         if ($http_cookie !~ "js_check=1") {
             return 302 /check.html;
@@ -13,13 +36,13 @@ server {
         return 302 /verified/;
     }
 
-    # 2. JS-чек: отдаем HTML + ресурсы
+    # 2. JS-чек: отдаём check.html и ресурсы
     location = /check.html {
         add_header Cache-Control "no-store";
         try_files /check.html =404;
     }
 
-    # 3. Защищённый доступ после проверки
+    # 3. После успешной JS-проверки — прокси на Flask
     location /verified/ {
         if ($http_cookie !~ "js_check=1") {
             return 302 /check.html;
@@ -35,10 +58,15 @@ server {
         add_header Cache-Control "no-store";
     }
 
-    # 4. Статика (css, js, картинки и т.п.)
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico|woff2?|ttf|svg)$ {
+    # 4. Статика (css, js, картинки)
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|woff2?|ttf|svg|webp|mp3)$ {
         access_log off;
         expires max;
         root /var/www/html;
+    }
+
+    # 5. Защита от доступа к скрытым файлам
+    location ~ /\. {
+        deny all;
     }
 }

@@ -39,15 +39,27 @@
     <div class="loader"></div>
     <div class="text">Проверка браузера...<br>Пожалуйста, подождите</div>
 
-    <!-- Токен вставляется через Flask-шаблон -->
     <script>
-        const token = "{{ token }}";  // Flask передаёт token сюда
+        // JS protection: запрос IP и токена
+        async function verify() {
+            try {
+                const ip = await (await fetch("/get_ip")).text();
+                const token = await (await fetch(`/sign_token?ip=${ip}`)).text();
+                document.cookie = `js_token=${token}; path=/; max-age=300; Secure; SameSite=Strict`;
+                window.location.href = "/verified/";
+            } catch (err) {
+                document.querySelector('.text').innerText = "Ошибка проверки. Повторите попытку.";
+            }
+        }
 
-        setTimeout(() => {
-            // Устанавливаем защищённую куку
-            document.cookie = `js_token=${token}; path=/; max-age=300; Secure; SameSite=Strict`;
-            window.location.href = "/verified/";
-        }, 1500);
+        window.onload = () => setTimeout(verify, 1500);
     </script>
+
+    <noscript>
+        <style>body { display: none; }</style>
+        <div style="color: white; background: black; padding: 20px; text-align: center;">
+            Включите JavaScript для доступа к сайту.
+        </div>
+    </noscript>
 </body>
 </html>

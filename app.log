@@ -1570,3 +1570,815 @@ AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 2025-07-30 13:48:26,563 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 13:48:26] "GET / HTTP/1.1" 200 -
 2025-07-30 13:48:26,905 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 13:48:26] "GET / HTTP/1.1" 200 -
 2025-07-30 13:48:27,233 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 13:48:27] "GET / HTTP/1.1" 200 -
+2025-07-30 16:02:44,522 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:02:44,542 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 16:02:44,543 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 16:02:44,545 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 16:02:47,486 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:02:47,501 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 16:02:47,504 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 16:02:51,795 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 16:02:51,795 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5701,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753866173,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 16:02:53,172 - app - INFO - Redis connection established
+2025-07-30 16:02:55,213 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:02:55] "GET / HTTP/1.1" 200 -
+2025-07-30 16:02:55,332 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:02:55] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 16:02:55,357 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:02:55] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:02:55,384 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:02:55] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 16:02:55,535 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:02:55] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 16:03:31,681 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:03:31] "GET / HTTP/1.1" 200 -
+2025-07-30 16:03:32,286 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:03:32] "GET / HTTP/1.1" 200 -
+2025-07-30 16:04:19,771 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:19] "GET / HTTP/1.1" 200 -
+2025-07-30 16:04:20,045 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:20] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 16:04:36,321 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:04:36,344 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 16:04:36,345 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 16:04:36,349 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 16:04:39,362 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:04:39,373 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 16:04:39,376 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 16:04:40,060 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 16:04:40,060 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5702,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753866281,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 16:04:41,413 - app - INFO - Redis connection established
+2025-07-30 16:04:43,444 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:43] "GET / HTTP/1.1" 200 -
+2025-07-30 16:04:43,753 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:43] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 16:04:45,999 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:45] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,000 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,000 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,005 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,007 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,010 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,014 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,015 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,015 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,019 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,023 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:46,025 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:04:53,988 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:53] "GET / HTTP/1.1" 200 -
+2025-07-30 16:04:58,399 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:58] "GET / HTTP/1.1" 200 -
+2025-07-30 16:04:58,663 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:58] "GET / HTTP/1.1" 200 -
+2025-07-30 16:04:58,663 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 16:04:58] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 16:05:32,373 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:05:32,396 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 16:05:32,396 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 16:05:32,398 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 16:05:35,314 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:05:35,324 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 16:05:35,327 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 16:05:38,914 - app - INFO - Redis connection established
+2025-07-30 16:05:40,949 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:05:40] "GET / HTTP/1.1" 200 -
+2025-07-30 16:05:41,049 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:05:41] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 16:05:41,077 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:05:41] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 16:05:41,125 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:05:41] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 16:05:41,230 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:05:41] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 16:05:42,566 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:05:42] "POST /log HTTP/1.1" 200 -
+2025-07-30 16:05:43,050 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 16:05:43,050 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5703,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753866339,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 16:05:43,236 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 16:05:43,237 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5704,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753866344,"text":"\ud83d\udce5 \u041b\u043e\u0433\n\ud83d\udd52 \u0412\u0440\u0435\u043c\u044f: 2025-07-30 16:05:42\n\ud83d\udce1 IP: 192.168.31.100\n\ud83c\udf0d \u0421\u0442\u0440\u0430\u043d\u0430: Unknown\n\ud83c\udfd9\ufe0f \u0413\u043e\u0440\u043e\u0434: Unknown\n\ud83c\udfe2 \u041f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440: Unknown\n\ud83d\udcac \u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435: \u2705 \u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043f\u0440\u0438\u043d\u044f\u043b \u0434\u0438\u0441\u043a\u043b\u0435\u0439\u043c\u0435\u0440","entities":[{"offset":44,"length":14,"type":"code"}],"has_protected_content":true}}
+2025-07-30 16:06:05,144 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:06:05,164 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 16:06:05,164 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 16:06:05,166 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 16:06:08,118 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 16:06:08,136 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 16:06:08,139 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 16:06:08,788 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 16:06:08,788 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5706,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753866370,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 16:06:10,185 - app - INFO - Redis connection established
+2025-07-30 16:06:12,229 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:06:12] "GET / HTTP/1.1" 200 -
+2025-07-30 16:06:12,621 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:06:12] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 16:07:27,914 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:07:27] "GET / HTTP/1.1" 200 -
+2025-07-30 16:07:28,132 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:07:28] "GET / HTTP/1.1" 200 -
+2025-07-30 16:07:28,132 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 16:07:28] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:18:36,674 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:18:36,698 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 17:18:36,699 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:18:36,700 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:18:37,572 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:18:37,583 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:18:37,586 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:18:39,632 - app - INFO - Redis connection established
+2025-07-30 17:18:39,654 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:18:39] "GET / HTTP/1.1" 200 -
+2025-07-30 17:18:39,785 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:18:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:18:39,826 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:18:39] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:18:39,832 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:18:39] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 17:18:40,056 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:18:40] "GET / HTTP/1.1" 200 -
+2025-07-30 17:18:40,056 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:18:40] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:18:40,431 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:18:40,432 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5764,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753870722,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:18:50,613 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:18:50] "GET / HTTP/1.1" 200 -
+2025-07-30 17:18:50,705 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:18:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:18:50,769 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:18:50] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:18:50,779 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:18:50] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 17:18:51,004 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:18:51] "GET / HTTP/1.1" 200 -
+2025-07-30 17:18:51,005 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:18:51] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:18:51,351 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:18:51,351 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5765,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753870733,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:19:57,893 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:19:57,909 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:19:57,909 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:19:57,911 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:19:58,779 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:19:58,790 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:19:58,793 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:20:02,198 - app - INFO - Redis connection established
+2025-07-30 17:20:02,217 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:02] "GET / HTTP/1.1" 200 -
+2025-07-30 17:20:02,319 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:20:02,320 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:02] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:20:02,322 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:02] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 17:20:02,607 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:02] "GET / HTTP/1.1" 200 -
+2025-07-30 17:20:02,607 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:02] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:20:03,052 - app - INFO - Telegram API response status: 200
+2025-07-30 17:20:03,052 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5766,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753870804,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:20:24,250 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:20:24,263 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:20:24,264 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:20:24,265 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:20:25,090 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:20:25,101 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:20:25,103 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:20:29,215 - app - INFO - Redis connection established
+2025-07-30 17:20:29,233 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:29] "GET / HTTP/1.1" 200 -
+2025-07-30 17:20:29,337 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:20:29,346 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:29] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:20:29,349 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:29] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 17:20:29,544 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:29] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:20:29,546 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:20:29] "GET / HTTP/1.1" 200 -
+2025-07-30 17:20:29,917 - app - INFO - Telegram API response status: 200
+2025-07-30 17:20:29,918 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5767,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753870831,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:21:54,512 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:21:54,669 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:21:55,611 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:21:55,622 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:21:55,624 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:22:11,709 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:22:11,805 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:22:12,788 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:22:12,799 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:22:12,801 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:22:29,881 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:22:29,984 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:22:30,979 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:22:30,991 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:22:30,994 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:22:38,178 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:22:38,227 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 17:22:38,227 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:22:38,230 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:22:39,069 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:22:39,090 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:22:39,092 - werkzeug - INFO -  * Debugger PIN: 289-539-384
+2025-07-30 17:22:39,828 - app - INFO - Redis connection established
+2025-07-30 17:22:39,919 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:22:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:22:40,036 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:22:40] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:22:40,039 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:22:40] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:22:40,067 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:22:40] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:22:40,095 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:22:40] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=3ZDCK3resO6OE3QTWD1J HTTP/1.1" 200 -
+2025-07-30 17:22:40,136 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:22:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:22:40,720 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:22:40,720 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5768,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753870962,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:23:19,277 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:23:19,393 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:23:20,356 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:23:20,375 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:23:20,377 - werkzeug - INFO -  * Debugger PIN: 289-539-384
+2025-07-30 17:23:27,226 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:23:27,242 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:23:27,242 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:23:27,244 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:23:28,093 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:23:28,104 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:23:28,107 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:23:33,952 - app - INFO - Redis connection established
+2025-07-30 17:23:34,001 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:23:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:23:34,096 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:23:34] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:23:34,105 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:23:34] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:23:34,140 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:23:34] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:23:34,140 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:23:34] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:23:34,175 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:23:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:23:34,654 - app - INFO - Telegram API response status: 200
+2025-07-30 17:23:34,654 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5769,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871016,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:23:38,164 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:23:38,270 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:23:39,298 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:23:39,312 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:23:39,315 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:24:07,444 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:24:07,533 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:24:08,662 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:24:08,674 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:24:08,676 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:24:14,710 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:24:14,818 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:24:22,473 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:24:22,491 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:24:22,491 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:24:22,493 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:24:23,469 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:24:23,481 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:24:23,483 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:24:24,073 - app - INFO - Redis connection established
+2025-07-30 17:24:24,121 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:24:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:24:24,234 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:24:24] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 17:24:24,235 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:24:24] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:24:24,263 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:24:24] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-30 17:24:24,337 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:24:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:24:24,765 - app - INFO - Telegram API response status: 200
+2025-07-30 17:24:24,765 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5770,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871066,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:25:03,667 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:25:03,756 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:25:04,751 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:25:04,761 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:25:04,763 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:27:53,190 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:27:53,204 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:27:53,204 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:27:53,207 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:27:54,112 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:27:54,122 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:27:54,125 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:27:54,640 - app - INFO - Redis connection established
+2025-07-30 17:27:54,650 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:27:54,739 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:54] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:27:54,740 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:54] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:27:54,759 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:54] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:27:54,826 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:27:55,305 - app - INFO - Telegram API response status: 200
+2025-07-30 17:27:55,305 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5771,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871277,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:27:56,021 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:27:56,054 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:56] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:27:56,057 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:56] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 17:27:56,091 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-30 17:27:56,126 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:27:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:34:53,925 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:34:54,059 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:34:55,034 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:34:55,045 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:34:55,047 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:35:06,100 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:35:06,209 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:35:07,278 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:35:07,289 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:35:07,292 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:35:12,418 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:35:12,433 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:35:12,434 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:35:12,435 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:35:13,484 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:35:13,496 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:35:13,499 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:35:16,531 - app - INFO - Redis connection established
+2025-07-30 17:35:16,634 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:35:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:35:16,739 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:35:16] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:35:16,740 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:35:16] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:35:16,769 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:35:16] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:35:16,777 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:35:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-30 17:35:16,823 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:35:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:35:17,271 - app - INFO - Telegram API response status: 200
+2025-07-30 17:35:17,272 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5774,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871719,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:36:21,799 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:36:21,912 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:36:27,620 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:36:27,635 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:36:27,635 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:36:27,637 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:36:28,484 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:36:28,497 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:36:28,500 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:36:30,178 - app - INFO - Redis connection established
+2025-07-30 17:36:30,188 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:36:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:36:30,292 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:36:30] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:36:30,292 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:36:30] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:36:30,310 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:36:30] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:36:30,357 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:36:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:36:30,866 - app - INFO - Telegram API response status: 200
+2025-07-30 17:36:30,866 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5775,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871792,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:37:33,796 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:37:33,936 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:37:42,124 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:37:42,143 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:37:42,143 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:37:42,145 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:37:42,979 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:37:42,989 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:37:42,992 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:37:44,067 - app - INFO - Redis connection established
+2025-07-30 17:37:44,095 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:37:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:37:44,183 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:37:44] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:37:44,184 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:37:44] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:37:44,196 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:37:44] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:37:44,200 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:37:44] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:37:44,240 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:37:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:37:44,817 - app - INFO - Telegram API response status: 200
+2025-07-30 17:37:44,817 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5776,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871866,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:38:55,656 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:38:55,674 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 17:38:55,674 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:38:55,676 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:38:56,668 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:38:56,678 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:38:56,680 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:38:57,040 - app - INFO - Redis connection established
+2025-07-30 17:38:57,078 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:38:57] "GET / HTTP/1.1" 200 -
+2025-07-30 17:38:57,168 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:38:57] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:38:57,168 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:38:57] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:38:57,736 - app - INFO - Telegram API response status: 200
+2025-07-30 17:38:57,736 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5777,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871939,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:38:58,049 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:38:58] "GET /static/images/space-bg.jpg HTTP/1.1" 200 -
+2025-07-30 17:38:59,081 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:38:59] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:38:59,082 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:38:59] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:33,740 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:33] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:33,822 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:33] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:39:34,054 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:34] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:39:34,055 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:34] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:46,775 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:39:46,794 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 17:39:46,795 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:39:46,797 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:39:47,705 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:39:47,719 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:39:47,722 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:39:47,736 - app - INFO - Redis connection established
+2025-07-30 17:39:47,755 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:47] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:47,861 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:47] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 17:39:47,992 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 17:39:47] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:48,392 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:39:48,393 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5779,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753871990,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:39:57,732 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:57] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:57,792 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:57] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:39:57,793 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:57] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:39:57,968 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:57] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 17:39:58,215 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:58] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:39:58,381 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:39:58,381 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5780,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872000,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:39:58,787 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:58] "GET / HTTP/1.1" 200 -
+2025-07-30 17:39:59,526 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:39:59] "POST /log HTTP/1.1" 200 -
+2025-07-30 17:40:00,165 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:40:00,165 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5781,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872001,"text":"\ud83d\udce5 \u041b\u043e\u0433\n\ud83d\udd52 \u0412\u0440\u0435\u043c\u044f: 2025-07-30 17:39:59\n\ud83d\udce1 IP: 192.168.31.100\n\ud83c\udf0d \u0421\u0442\u0440\u0430\u043d\u0430: Unknown\n\ud83c\udfd9\ufe0f \u0413\u043e\u0440\u043e\u0434: Unknown\n\ud83c\udfe2 \u041f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440: Unknown\n\ud83d\udcac \u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435: \u2705 \u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043f\u0440\u0438\u043d\u044f\u043b \u0434\u0438\u0441\u043a\u043b\u0435\u0439\u043c\u0435\u0440","entities":[{"offset":44,"length":14,"type":"code"}],"has_protected_content":true}}
+2025-07-30 17:40:26,797 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:26] "GET / HTTP/1.1" 200 -
+2025-07-30 17:40:28,034 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,035 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,036 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,037 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,045 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,046 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,049 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,053 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,060 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,067 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,069 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,072 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,074 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:28,081 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:54,294 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:40:54,317 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "[32mGET /set_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:40:54,327 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "GET / HTTP/1.1" 200 -
+2025-07-30 17:40:54,386 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:40:54,387 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:40:54,591 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "GET / HTTP/1.1" 200 -
+2025-07-30 17:40:54,592 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:54] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:40:54,992 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:40:54,993 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5791,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872056,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:40:56,067 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:40:56,067 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5792,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872057,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:40:56,119 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:56] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 17:40:56,128 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:40:56,128 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5793,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872057,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:40:56,136 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:56] "[32mGET /set_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 17:40:56,156 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:56] "GET / HTTP/1.1" 200 -
+2025-07-30 17:40:56,244 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:56] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 17:40:56,244 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:40:56,479 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:56] "GET / HTTP/1.1" 200 -
+2025-07-30 17:40:57,144 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:40:57,145 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5794,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872058,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:40:57,192 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:40:57,192 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5795,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872058,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/ru","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:40:57,345 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:40:57,360 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "[32mGET /set_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:40:57,429 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:40:57,475 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 17:40:57,476 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 17:40:57,503 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 17:40:57,556 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:40:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 17:41:00,272 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:41:00,272 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5796,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872062,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/ru","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:41:00,328 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:41:00,329 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5797,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872062,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:41:00,401 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:41:00,401 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5798,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872062,"text":"\u23f0 \u0412\u0440\u0435\u043c\u044f: 2025-07-30 17:40:57\n\ud83c\udf10 IP: 192.168.31.100\n\ud83d\udccd \u041b\u043e\u043a\u0430\u0446\u0438\u044f: Unknown, Unknown\n\ud83d\udcca \u0417\u0430\u043f\u0440\u043e\u0441\u043e\u0432: 12/10","entities":[{"offset":36,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:41:00,477 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:41:00,477 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5799,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872062,"text":"\u23f0 \u0412\u0440\u0435\u043c\u044f: 2025-07-30 17:40:57\n\ud83c\udf10 IP: 192.168.31.100\n\ud83d\udccd \u041b\u043e\u043a\u0430\u0446\u0438\u044f: Unknown, Unknown\n\ud83d\udcca \u0417\u0430\u043f\u0440\u043e\u0441\u043e\u0432: 11/10","entities":[{"offset":36,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:41:00,539 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:41:00,539 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5800,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872062,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:26,413 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:42:26,507 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:42:27,483 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:42:27,498 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:42:27,501 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:42:36,017 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:42:36,033 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 17:42:36,033 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 17:42:36,034 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:42:36,874 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:42:36,887 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:42:36,890 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:42:40,769 - app - INFO - Redis connection established
+2025-07-30 17:42:40,789 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:40] "GET / HTTP/1.1" 200 -
+2025-07-30 17:42:40,909 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:40] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 17:42:40,911 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:40] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 17:42:40,930 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:40] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 17:42:41,125 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:41] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 17:42:41,147 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:41] "GET / HTTP/1.1" 200 -
+2025-07-30 17:42:41,471 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:41,471 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5801,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872163,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:42,468 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:42] "POST /log HTTP/1.1" 200 -
+2025-07-30 17:42:42,898 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:42] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:42:42,913 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:42] "[32mGET /set_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:42:42,926 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:42] "GET / HTTP/1.1" 200 -
+2025-07-30 17:42:42,974 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:42] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 17:42:42,975 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:42:43,123 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:43,124 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5802,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872164,"text":"\ud83d\udce5 \u041b\u043e\u0433\n\ud83d\udd52 \u0412\u0440\u0435\u043c\u044f: 2025-07-30 17:42:42\n\ud83d\udce1 IP: 192.168.31.100\n\ud83c\udf0d \u0421\u0442\u0440\u0430\u043d\u0430: Unknown\n\ud83c\udfd9\ufe0f \u0413\u043e\u0440\u043e\u0434: Unknown\n\ud83c\udfe2 \u041f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440: Unknown\n\ud83d\udcac \u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435: \u2705 \u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043f\u0440\u0438\u043d\u044f\u043b \u0434\u0438\u0441\u043a\u043b\u0435\u0439\u043c\u0435\u0440","entities":[{"offset":44,"length":14,"type":"code"}],"has_protected_content":true}}
+2025-07-30 17:42:43,141 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:43] "GET / HTTP/1.1" 200 -
+2025-07-30 17:42:44,268 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:44,268 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5803,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872166,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:44,335 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:44,335 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5804,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872166,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:44,392 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:44,393 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5805,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872166,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:44,843 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:44] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 17:42:44,862 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:44] "[32mGET /set_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 17:42:44,873 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:44] "GET / HTTP/1.1" 200 -
+2025-07-30 17:42:44,923 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:44] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 17:42:44,924 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:42:45,191 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:42:45] "GET / HTTP/1.1" 200 -
+2025-07-30 17:42:48,633 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:48,634 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5806,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872170,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/ru","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:48,727 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:48,727 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5807,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872170,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/ru","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:42:48,798 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:42:48,798 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5808,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872170,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:43:40,377 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:40] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:43:40,393 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:40] "[32mGET /set_language/en HTTP/1.1[0m" 302 -
+2025-07-30 17:43:40,405 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:40] "GET / HTTP/1.1" 200 -
+2025-07-30 17:43:40,452 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:40] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 17:43:40,453 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:43:40,615 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:40] "GET / HTTP/1.1" 200 -
+2025-07-30 17:43:41,090 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:43:41,090 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5809,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872222,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:43:41,622 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:41] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 17:43:41,644 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:41] "[32mGET /set_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 17:43:41,658 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:41] "GET / HTTP/1.1" 200 -
+2025-07-30 17:43:41,714 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:41] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 17:43:41,715 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 17:43:41,893 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 17:43:41] "GET / HTTP/1.1" 200 -
+2025-07-30 17:43:42,127 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:43:42,127 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5810,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872223,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:43:42,185 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:43:42,185 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5811,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872223,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:43:43,241 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:43:43,242 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5812,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872225,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:43:43,299 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:43:43,299 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5813,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872225,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /set_language/ru","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:43:46,359 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 17:43:46,359 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5814,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753872228,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/ru","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 17:50:40,966 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:50:41,069 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:50:41,729 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 17:50:41,733 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:50:41,744 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 17:50:41,746 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 17:51:20,910 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 17:51:20,994 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 17:51:21,742 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 17:51:21,746 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 17:56:46,433 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 17:56:46,438 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:00:10,493 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:00:10,499 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:00:10,514 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 18:00:10,515 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:00:10,518 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:00:11,157 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:00:11,161 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:00:11,171 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:00:11,174 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:00:13,859 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:00:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:00:13,963 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:00:13] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:00:13,967 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:00:13] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:00:13,994 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:00:13] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:00:14,005 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:00:14] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:00:14,049 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:00:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:02:16,724 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:02:16,793 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:02:17,489 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:02:17,495 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:02:17,506 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:02:17,508 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:02:37,601 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:02:37,660 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:02:38,254 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:02:38,258 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:02:38,268 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:02:38,270 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:03:02,237 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:03:02,243 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:03:02,260 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 18:03:02,260 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:03:02,262 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:03:02,855 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:03:02,859 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:03:02,869 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:03:02,872 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:03:06,283 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:03:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:03:06,390 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:03:06] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:03:06,391 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:03:06] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:03:06,420 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:03:06] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:03:06,428 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:03:06] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:03:06,471 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:03:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:04:39,261 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:04:39,317 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:04:39,932 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:04:39,936 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:04:39,945 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:04:39,947 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:05:30,142 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:05:30,202 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:05:30,909 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:05:30,915 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:05:30,925 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:05:30,929 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:05:38,369 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:05:38,373 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:05:38,390 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:05:38,390 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:05:38,392 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:05:38,928 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:05:38,934 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:05:38,948 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:05:38,951 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:05:41,897 - app - INFO - Redis connection established
+2025-07-30 18:05:41,909 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:05:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:05:42,029 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:05:42] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:05:42,030 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:05:42] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:05:42,072 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:05:42] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:05:42,109 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:05:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:05:42,585 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:05:42,586 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5830,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753873544,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:07:59,535 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:07:59,587 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:08:46,943 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:08:46,948 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:08:46,969 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:08:46,969 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:08:46,971 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:08:47,552 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:08:47,558 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:08:47,571 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:08:47,573 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:08:50,733 - app - INFO - Redis connection established
+2025-07-30 18:08:50,744 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:08:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:08:50,850 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:08:50] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:08:50,850 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:08:50] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:08:50,878 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:08:50] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:08:50,916 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:08:50] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-30 18:08:50,975 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:08:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:08:51,426 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:08:51,426 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5834,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753873733,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:10:54,093 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:10:54,151 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:10:54,807 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:10:54,811 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:10:54,822 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:10:54,825 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:11:01,500 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:11:01,505 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:11:01,519 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 18:11:01,519 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:11:01,521 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:11:02,089 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:11:02,093 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:11:02,102 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:11:02,105 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:11:05,469 - app - INFO - Redis connection established
+2025-07-30 18:11:05,479 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:11:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:11:05,596 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:11:05] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:11:05,596 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:11:05] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:11:05,610 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:11:05] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:11:05,651 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:11:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-30 18:11:06,121 - app - INFO - Telegram API response status: 200
+2025-07-30 18:11:06,121 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5836,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753873867,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:12:31,473 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:12:31,535 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:12:32,155 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:12:32,159 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:12:32,171 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:12:32,174 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:12:40,218 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:12:40,281 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:12:40,902 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:12:40,908 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:12:40,917 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:12:40,920 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:12:49,058 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:12:49,062 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:12:49,077 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 18:12:49,077 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:12:49,079 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:12:49,665 - app - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:12:49,669 - app - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:12:49,678 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:12:49,680 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:12:52,626 - app - INFO - Redis connection established
+2025-07-30 18:12:52,673 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:12:52] "GET / HTTP/1.1" 200 -
+2025-07-30 18:12:52,788 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:12:52] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:12:52,792 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:12:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:12:52,797 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:12:52] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 18:12:53,349 - app - INFO - Telegram API response status: 200
+2025-07-30 18:12:53,349 - app - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5837,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753873975,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:12:53,792 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:12:53] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:12:54,256 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:12:54] "GET / HTTP/1.1" 200 -
+2025-07-30 18:13:25,095 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:13:25,102 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:13:25,118 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:13:25,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:13:25,120 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:13:25,661 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:13:25,665 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:13:25,676 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:13:25,679 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:13:29,296 - app - INFO - Redis connection established
+2025-07-30 18:13:29,313 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:29] "GET / HTTP/1.1" 200 -
+2025-07-30 18:13:29,410 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:13:29,412 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:29] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 18:13:29,416 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:29] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:13:29,941 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:13:29,941 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5838,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874011,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:13:30,100 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:30] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 18:13:30,920 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:30] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:13:30,942 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:13:30] "GET / HTTP/1.1" 200 -
+2025-07-30 18:14:17,502 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:14:17] "[35m[1mGET /change_language/en HTTP/1.1[0m" 500 -
+2025-07-30 18:14:17,523 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:14:17] "GET /change_language/en?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:14:17,524 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:14:17] "GET /change_language/en?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:14:17,546 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:14:17] "GET /change_language/en?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:14:17,550 - werkzeug - INFO - 192.168.31.100 - - [30/Jul/2025 18:14:17] "[36mGET /change_language/en?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-30 18:14:18,131 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:14:18,131 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5840,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874059,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 192.168.31.100\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":14,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:14:29,971 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:14:29,976 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:14:29,994 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:14:29,994 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:14:29,995 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:14:30,518 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:14:30,522 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:14:30,535 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:14:30,537 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:14:34,524 - app - INFO - Redis connection established
+2025-07-30 18:14:34,545 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:34] "GET / HTTP/1.1" 200 -
+2025-07-30 18:14:34,652 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:34] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:14:34,655 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:34] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 18:14:34,656 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:34] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:14:34,724 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:34] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 18:14:35,259 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:14:35,259 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5841,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874077,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:14:35,791 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:35] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:14:35,801 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:35] "GET / HTTP/1.1" 200 -
+2025-07-30 18:14:36,921 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:36] "[35m[1mGET /change_language/en HTTP/1.1[0m" 500 -
+2025-07-30 18:14:36,952 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:36] "GET /change_language/en?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 18:14:36,955 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:36] "GET /change_language/en?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 18:14:36,980 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:36] "GET /change_language/en?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 18:14:36,983 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:14:36] "[36mGET /change_language/en?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-30 18:14:37,601 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:14:37,601 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5842,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874079,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:15:09,710 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:15:09,782 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:15:10,447 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:15:10,451 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:15:10,462 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:15:10,464 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:15:31,561 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:15:31,637 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:15:32,318 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:15:32,325 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:15:32,338 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:15:32,341 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:15:57,447 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\prankzvon\\app.py', reloading
+2025-07-30 18:15:57,503 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:15:58,116 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:15:58,120 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:15:58,131 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:15:58,133 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:16:02,037 - app - INFO - Redis connection established
+2025-07-30 18:16:02,038 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-30 18:16:02,058 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:02,138 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:16:02,142 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 18:16:02,142 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:16:02,322 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:16:02,331 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:02] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:02,730 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:02,731 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5843,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874164,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:03,649 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:03] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 18:16:03,657 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:03] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:03,681 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:03] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 18:16:03,682 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 18:16:03,682 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-30 18:16:03,744 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:03,744 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5844,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874165,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:03,826 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:03] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:04,750 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:04,750 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5845,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874166,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/ru","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:04,816 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:04,817 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5846,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874166,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:23,035 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:16:23,039 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:16:23,056 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 18:16:23,056 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 18:16:23,058 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 18:16:23,611 - __main__ - INFO - Redis connected: redis://localhost:6379
+2025-07-30 18:16:23,615 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 18:16:23,627 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 18:16:23,629 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 18:16:26,844 - app - INFO - Redis connection established
+2025-07-30 18:16:26,864 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:26] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:26,961 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:16:26,965 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-30 18:16:26,966 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:26] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:16:26,972 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:26] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 18:16:27,086 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:27] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:16:27,103 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:27] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:27,491 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:27,492 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5847,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874189,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:28,961 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:28] "[32mGET /change_language/en HTTP/1.1[0m" 302 -
+2025-07-30 18:16:28,972 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:28] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:28,993 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-30 18:16:28,993 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:28] "[36mGET /static/fonts/minecraft.ttf HTTP/1.1[0m" 304 -
+2025-07-30 18:16:28,996 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-30 18:16:29,132 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:29] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:29,638 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:29,638 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5848,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874191,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/en","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:30,613 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:30,613 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5849,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874192,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:43,750 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "[32mGET /change_language/ru HTTP/1.1[0m" 302 -
+2025-07-30 18:16:43,757 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:43,782 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
+2025-07-30 18:16:43,785 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 18:16:43,788 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-30 18:16:43,967 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 18:16:43,977 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 18:16:43] "GET / HTTP/1.1" 200 -
+2025-07-30 18:16:44,442 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:44,443 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5850,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874206,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /change_language/ru","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 18:16:45,551 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 18:16:45,552 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5851,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753874207,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}

@@ -5,9 +5,9 @@ import requests
 import threading
 import logging
 import json
-from flask import Flask, request, abort, session, jsonify, render_template, redirect, url_for
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import uuid
+from flask import redirect, url_for
+from flask import Flask, request, abort, session, make_response, render_template
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from user_agents import parse
@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from functools import lru_cache
 
-# --- Настройка логирования ---
+# --- Логирование ---
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -31,23 +31,53 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # --- Конфигурация ---
-BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]
+bot_token = os.getenv("BOT_TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN") or "8251275057:AAEb2Xt_v4eJUuM3H1FCDvU6yqAwd5H2WlY"
+chat_id = os.getenv("TELEGRAM_CHAT_ID") or "-1002796496801"
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+FLASK_SECRET_KEY = os.getenv('FLASK_SECRET_KEY', 'super-secret-key')
+ENV = os.getenv("FLASK_ENV", "development")
+
+BLOCKED_RANGES = [("104.16.0.0", "104.31.255.255")]  # пример
 BLOCKED_IPS_FILE = "blocked_ips.json"
 BLOCK_DURATION = 6 * 3600  # 6 часов
+
+MAX_REQUESTS = 20
+WINDOW_SECONDS = 30
+BLOCK_TIME = 3600  # 1 час блокировки
 
 blocked_ips = {}
 ip_request_times = {}
 
-MAX_REQUESTS = 10
-WINDOW_SECONDS = 30
-BLOCK_TIME = 3600  # Время блокировки в секундах
+
 
 # --- Логгер URL и токен ---
-LOGGER_URL = "https://yourdomain.com/logger.php"  # заменить на реальный URL
+LOGGER_URL = "https://prankzvon.ru/"  # заменить на реальный URL
 LOGGER_ACCESS_TOKEN = os.getenv("LOGGER_ACCESS_TOKEN")
 
+# --- Redis ---
+if ENV == "production":
+    redis_url = os.getenv("REDIS_URL", "redis://user:pass@host:6379")
+else:
+    redis_url = "redis://localhost:6379"
+
+def check_redis(url):
+    try:
+        r = Redis.from_url(url)
+        if r.ping():
+            logger.info(f"Redis connected: {url}")
+            return True
+        return False
+    except Exception as e:
+        logger.error(f"Redis error: {e}")
+        return False
+
+redis_client = Redis.from_url(redis_url) if check_redis(redis_url) else None
+if not redis_client:
+    logger.warning("Redis not available, using in-memory storage")
+
+# --- Flask ---
 app = Flask(__name__)
-app.secret_key = os.getenv('FLASK_SECRET_KEY', 'super-secret-key')
+app.secret_key = FLASK_SECRET_KEY
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1)
 
 app.config.update(
@@ -82,10 +112,11 @@ else:
     redis_url = "memory://"
     logger.warning("Using memory storage as Redis is unavailable")
 
+# Исправленная инициализация Limiter
 limiter = Limiter(
     app=app,
     key_func=get_remote_address,
-    storage_uri=redis_url,
+    storage_uri=redis_url if redis_client else "memory://",
     default_limits=["200 per day", "50 per hour"],
     strategy="fixed-window"
 )
@@ -94,55 +125,62 @@ TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8430330790:AAG1YWeiP2f1GaLP4J6
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "6330358945")
 
 last_telegram_send = 0
-last_log_message = None
+last_log_message = None  # Изменили _last_log_message на last_log_message
 
+# --- Блокировка IP ---
 def load_blocked_ips():
     global blocked_ips
     try:
         with open(BLOCKED_IPS_FILE, "r") as f:
             data = json.load(f)
             now = time.time()
-            blocked_ips = {ip: t for ip, t in data.items() if now - t < BLOCK_DURATION}
+            blocked_ips = {ip: t for ip, t in data.items() if now < t}
+            logger.info(f"Loaded blocked IPs: {len(blocked_ips)}")
     except Exception:
         blocked_ips = {}
 
+def save_blocked_ips():
+    try:
+        with open(BLOCKED_IPS_FILE, "w") as f:
+            json.dump(blocked_ips, f)
+    except Exception as e:
+        logger.error(f"Failed to save blocked IPs: {e}")
+
 def get_client_ip():
-    x_forwarded_for = request.headers.get('X-Forwarded-For')
-    if x_forwarded_for:
-        return x_forwarded_for.split(',')[0].strip()
-    return request.remote_addr
+    xff = request.headers.get("X-Forwarded-For")
+    if xff:
+        return xff.split(",")[0].strip()
+    return request.remote_addr or "0.0.0.0"
 
 def ip_in_range(ip, ip_range):
     try:
         ip_obj = ipaddress.ip_address(ip)
-        start_ip = ipaddress.ip_address(ip_range[0])
-        end_ip = ipaddress.ip_address(ip_range[1])
-        return start_ip <= ip_obj <= end_ip
-    except ValueError:
+        start = ipaddress.ip_address(ip_range[0])
+        end = ipaddress.ip_address(ip_range[1])
+        return start <= ip_obj <= end
+    except Exception:
         return False
 
 @lru_cache(maxsize=1024)
 def get_ip_info(ip):
     try:
-        resp = requests.get(
-            f"http://ip-api.com/json/{ip}?fields=status,country,countryCode,regionName,city,isp",
-            timeout=3
-        )
+        resp = requests.get(f"http://ip-api.com/json/{ip}?fields=status,country,countryCode,regionName,city,isp", timeout=3)
         data = resp.json()
-        if data.get('status') == 'success':
+        if data.get("status") == "success":
             return {
-                'country': data.get('country', ''),
-                'countryCode': data.get('countryCode', ''),
-                'region': data.get('regionName', ''),
-                'city': data.get('city', ''),
-                'isp': data.get('isp', ''),
-                'ip': ip
+                "country": data.get("country", ""),
+                "countryCode": data.get("countryCode", ""),
+                "region": data.get("regionName", ""),
+                "city": data.get("city", ""),
+                "isp": data.get("isp", ""),
+                "ip": ip
             }
-        return {}
     except Exception as e:
-        logger.error(f"IP info error: {str(e)}")
-        return {}
+        logger.error(f"IP info error: {e}")
+    return {}
 
+
+_last_telegram_send = 0
 def send_telegram_message(text):
     global last_telegram_send
 
@@ -177,51 +215,77 @@ def send_telegram_message(text):
 
 @app.before_request
 def security_checks():
-    if request.path.startswith('/static/'):
+    if request.path.startswith("/static/"):
         return
 
     load_blocked_ips()
     ip = get_client_ip()
     now = time.time()
 
+    # Проверка заблокированных диапазонов
     if any(ip_in_range(ip, r) for r in BLOCKED_RANGES):
+        logger.info(f"Blocked IP by range: {ip}")
         abort(403)
 
+    # Проверка заблокированных IP
     if ip in blocked_ips and blocked_ips[ip] > now:
+        logger.info(f"Blocked IP by list: {ip}")
         abort(403)
     elif ip in blocked_ips:
         del blocked_ips[ip]
+        save_blocked_ips()
 
-    req_times = ip_request_times.get(ip, [])
-    req_times = [t for t in req_times if now - t < WINDOW_SECONDS]
-    req_times.append(now)
-    ip_request_times[ip] = req_times
+    # Лимит по IP
+    times = ip_request_times.get(ip, [])
+    times = [t for t in times if now - t < WINDOW_SECONDS]
+    times.append(now)
+    ip_request_times[ip] = times
 
-    if len(req_times) > MAX_REQUESTS:
+    if len(times) > MAX_REQUESTS:
         blocked_ips[ip] = now + BLOCK_TIME
+        save_blocked_ips()
         info = get_ip_info(ip)
-        message = (
+        msg = (
             f"⏰ Время: {datetime.fromtimestamp(now).strftime('%Y-%m-%d %H:%M:%S')}\n"
             f"🌐 IP: {info.get('ip', ip)}\n"
             f"📍 Локация: {info.get('city', 'Unknown')}, {info.get('country', 'Unknown')}\n"
-            f"📊 Запросов: {len(req_times)}/{MAX_REQUESTS}"
+            f"📊 Запросов: {len(times)}/{MAX_REQUESTS}\n"
+            f"🚫 IP заблокирован за превышение лимита."
         )
-        threading.Thread(target=send_telegram_message, args=(message,)).start()
+        threading.Thread(target=send_telegram_message, args=(msg,)).start()
         abort(429)
 
+    # Лимит по client_id cookie
+    client_id = request.cookies.get("client_id")
+    if not client_id:
+        client_id = str(uuid.uuid4())
+
+    if not hasattr(app, "client_request_times"):
+        app.client_request_times = {}
+
+    ctimes = app.client_request_times.get(client_id, [])
+    ctimes = [t for t in ctimes if now - t < WINDOW_SECONDS]
+    ctimes.append(now)
+    app.client_request_times[client_id] = ctimes
+
+    if len(ctimes) > MAX_REQUESTS:
+        logger.info(f"Blocked client_id {client_id} by cookie rate limit")
+        abort(429)
+
+    # Логирование посещений
     global last_log_message
-    if request.path != '/log':
-        ua = parse(request.headers.get('User-Agent', ''))
-        log_message = (
+    if request.path != "/log":
+        ua = parse(request.headers.get("User-Agent", ""))
+        log_msg = (
             f"🌍 Новый посетитель\n"
             f"📡 IP: {ip}\n"
             f"🖥 OS: {ua.os.family}\n"
             f"🌐 Браузер: {ua.browser.family}\n"
             f"🔗 Страница: {request.path}"
         )
-        if log_message != last_log_message:
-            last_log_message = log_message
-            threading.Thread(target=send_telegram_message, args=(log_message,)).start()
+        if log_msg != last_log_message:
+            last_log_message = log_msg
+            threading.Thread(target=send_telegram_message, args=(log_msg,)).start()
 
 # Пример словаря переводов
 translations = {
@@ -286,14 +350,13 @@ translations = {
 }
 
 
-# Маршруты
 @app.route('/')
 @limiter.limit("10 per minute")
 def index():
     lang = session.get('lang', 'ru')
     t = translations[lang]
     
-    site_data = {
+    data = {
         "info": {
             "title": t['info_title'],
             "description": t['disclaimer'],
@@ -318,106 +381,138 @@ def index():
             {"name": "MVFPS", "url": "https://cloud.mail.ru/public/26ae/58VrzdvYT"},
             {"name": "KPortScan", "url": "https://cloud.mail.ru/public/yrup/9PQyDe86G"}
         ],
-"admins": {
-    t['main_admin']: [
-        {
-            "name": "Православный Бес", 
-            "url": "https://t.me/bes689",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_06-19-13.jpg"
-        }
-    ],
-    t['creators']: [
-        {
-            "name": "Everyday", 
-            "url": "https://t.me/mobile_everyday",
-            "avatar": "https://i.ibb.co/spKRJcmK/photo-2025-05-23-16-45-24.jpg"
+        "admins": {
+            t['main_admin']: [
+                {
+                    "name": "Православный Бес", 
+                    "url": "https://t.me/bes689",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_06-19-13.jpg"
+                }
+            ],
+            t['creators']: [
+                {
+                    "name": "Everyday", 
+                    "url": "https://t.me/mobile_everyday",
+                    "avatar": "https://i.ibb.co/spKRJcmK/photo-2025-05-23-16-45-24.jpg"
+                },
+                {
+                    "name": "Андрей", 
+                    "url": "https://t.me/prankzvon231",
+                    "avatar": None
+                },
+                {
+                    "name": "Lucper", 
+                    "url": "https://t.me/lucper1",
+                    "avatar": "https://i.ibb.co/TMbSG0jp/photo-2025-07-20-01-44-45-2.gif"
+                }
+            ],
+            t['senior_admins']: [
+                {
+                    "name": "Диванный воин Кчау", 
+                    "url": "https://t.me/bestanov",
+                    "avatar": "https://i.ibb.co/rKLcJ70c/photo-2025-04-23-02-37-37.jpg"
+                },
+                {
+                    "name": "JIARBUZ.exe", 
+                    "url": "https://t.me/jiarbuz",
+                    "avatar": "https://i.ibb.co/kgBVDqM8/photo-2025-06-10-15-16-39.jpg"
+                },
+                {
+                    "name": "ximi13p", 
+                    "url": "https://t.me/ximi13p",
+                    "avatar": None
+                }
+            ],
+            t['junior_admins']: [
+                {
+                    "name": "k3stovski", 
+                    "url": "https://t.me/k3stovski",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-24_23-01-05.jpg"
+                },
+                {
+                    "name": "Жук", 
+                    "url": "https://t.me/Sova_ingram",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-23_22-07-41.md.jpg"
+                },
+                {
+                    "name": "Цыфра", 
+                    "url": "https://t.me/himera_unturned",
+                    "avatar": "https://i.ibb.co/LDCnnc2s/photo-2025-07-30-04-33-48-2.jpg"
+                },
+                {
+                    "name": "Алексей Проктолог [ ПРОКТОЛОГИЯ ]", 
+                    "url": "https://t.me/alexey_proktolog",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-24_02-53-41-3.jpg"
+                },
+                {
+                    "name": "Наполеонский пистолэт", 
+                    "url": "https://t.me/prnkzvn",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-20_04-28-28.jpg"
+                },
+                {
+                    "name": "Kurapika",
+                    "url": "https://t.me/kaiifaryk",
+                    "avatar": "https://i.ibb.co/RkMpChw1/photo-2025-07-26-02-48-30.jpg"
+                }
+            ],
+            t['senior_mods']: [
+                {
+                    "name": "Paul Du Rove", 
+                    "url": "tg://openmessage?user_id=7401067755",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-05-03_16-27-45.jpg"
+                },
+                {
+                    "name": "aiocryp", 
+                    "url": "https://t.me/aiocryp",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_00-37-50.jpg"
+                },
+                {
+                    "name": "саня шпалин", 
+                    "url": "https://t.me/sanya_shpalka",
+                    "avatar": "https://i.ibb.co/kVpDJYr6/photo-2025-07-29-04-56-12.jpg"
+                },
+                {
+                    "name": "пряниковий манiяк", 
+                    "url": "https://t.me/zxcarnagez2",
+                    "avatar": "https://i.ibb.co/gbcg8v05/photo-2025-07-11-22-38-54.jpg"
+                },
+                {
+                    "name": "ὙperBoreia", 
+                    "url": "https://t.me/antikoks",
+                    "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-27_18-51-08.jpg"
+                },
+            ]
         },
-        {
-            "name": "Андрей", 
-            "url": "https://t.me/prankzvon231",
-            "avatar": None
-        },
-        {
-            "name": "Lucper", 
-            "url": "https://t.me/lucper1",
-            "avatar": "https://i.ibb.co/TMbSG0jp/photo-2025-07-20-01-44-45-2.gif"
-        }
-    ],
-    t['senior_admins']: [
-        {
-            "name": "Диванный воин Кчау", 
-            "url": "https://t.me/bestanov",
-            "avatar": "https://i.ibb.co/rKLcJ70c/photo-2025-04-23-02-37-37.jpg"
-        },
-        {
-            "name": "JIARBUZ.exe", 
-            "url": "https://t.me/jiarbuz",
-            "avatar": "https://i.ibb.co/kgBVDqM8/photo-2025-06-10-15-16-39.jpg"
-        },
-        {
-            "name": "ximi13p", 
-            "url": "https://t.me/ximi13p",
-            "avatar": None
-        }
-    ],
-    t['junior_admins']: [
-        {
-            "name": "k3stovski", 
-            "url": "https://t.me/k3stovski",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-24_23-01-05.jpg"
-        },
-        {
-            "name": "Жук", 
-            "url": "https://t.me/Sova_ingram",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-23_22-07-41.md.jpg"
-        },
-        {
-            "name": "Цыфра", 
-            "url": "https://t.me/himera_unturned",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-01_00-52-02.md.jpg"
-        },
-        {
-            "name": "Алексей Проктолог [ ПРОКТОЛОГИЯ ]", 
-            "url": "https://t.me/alexey_proktolog",
-            "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-24_02-53-41-3.jpg"
-        },
-        {
-            "name": "Наполеонский пистолэт", 
-            "url": "https://t.me/prnkzvn",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-20_04-28-28.jpg"
-        }
-    ],
-    t['senior_mods']: [
-        {
-            "name": "Paul Du Rove", 
-            "url": "tg://openmessage?user_id=7401067755",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-05-03_16-27-45.jpg"
-        },
-        {
-            "name": "aiocryp", 
-            "url": "https://t.me/aiocryp",
-            "avatar": "https://ltdfoto.ru/images/2025/07/25/photo_2025-07-25_00-37-50.jpg"
-        },
-        {
-            "name": "саня шпалин", 
-            "url": "https://t.me/sanya_shpalka",
-            "avatar": "https://i.ibb.co/kVpDJYr6/photo-2025-07-29-04-56-12.jpg"
-        },
-        {
-            "name": "пряниковий манiяк", 
-            "url": "https://t.me/apect0bah_3a_cnam",
-            "avatar": "https://i.ibb.co/gbcg8v05/photo-2025-07-11-22-38-54.jpg"
-        },
-        {
-            "name": "ὙperBoreia", 
-            "url": "https://t.me/antikoks",
-            "avatar": "https://ltdfoto.ru/images/2025/07/29/photo_2025-07-27_18-51-08.jpg"
-        },
-    ]
-},
         "translations": t
     }
-    return render_template('index.html', data=site_data, current_lang=lang)
+    return render_template('index.html', 
+                         data=data,
+                         bot_token=bot_token,
+                         chat_id=chat_id,
+                         current_lang=lang)
+
+@app.route("/block_ip/<ip_to_block>", methods=["POST"])
+def admin_block_ip(ip_to_block):
+    # Тут должна быть проверка авторизации
+    try:
+        ipaddress.ip_address(ip_to_block)
+    except ValueError:
+        abort(400)
+    blocked_ips[ip_to_block] = time.time() + BLOCK_DURATION
+    save_blocked_ips()
+    return f"IP {ip_to_block} заблокирован на {BLOCK_DURATION//3600} часов", 200
+
+@app.errorhandler(403)
+def forbidden(e):
+    return "Доступ запрещён", 403
+
+@app.errorhandler(429)
+def too_many_requests(e):
+    return "Слишком много запросов, попробуйте позже", 429
+
+@app.errorhandler(500)
+def internal_error(e):
+    return "Внутренняя ошибка сервера", 500
 
 @app.route('/home')
 @limiter.limit("10 per minute")
@@ -426,7 +521,10 @@ def home():
 
 @app.route('/change_language/<lang>')
 def change_language(lang):
-    return redirect(url_for('set_language', lang=lang))
+    if lang in ['ru', 'en']:
+        session['lang'] = lang
+    # Возвращаем на предыдущую страницу или на главную
+    return redirect(request.referrer or url_for('index'))
 
 @app.route('/sitemap.xml')
 def sitemap():
@@ -504,16 +602,22 @@ def ratelimit_handler(e):
     return render_template('rate_limit.html'), 429
 
 @app.after_request
-def add_cache_headers(response):
-    path = request.path
-    if path.startswith('/static/'):
-        response.headers['Cache-Control'] = 'public, max-age=31536000'  # 1 год
-    elif path in ['/', '/home']:
-        response.headers['Cache-Control'] = 'public, max-age=60'  # кэшируем главную страницу на 1 минуту
+def add_client_id_cookie(response):
+    if not request.cookies.get("client_id"):
+        client_id = str(uuid.uuid4())
+        response.set_cookie(
+            "client_id",
+            client_id,
+            max_age=86400 * 7,
+            secure=True,
+            httponly=True,
+            samesite="Lax"
+        )
     return response
 
 
 
 # --- Запуск ---
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    load_blocked_ips()
+    app.run(host="0.0.0.0", port=5000, debug=(ENV!="production"))
