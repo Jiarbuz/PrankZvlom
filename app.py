@@ -35,7 +35,7 @@ BLOCKED_IPS_FILE = "blocked_ips.json"
 BLOCK_DURATION = 6 * 3600  # 6 часов
 blocked_ips = {}
 ip_request_times = {}
-MAX_REQUESTS = 30
+MAX_REQUESTS = 10
 WINDOW_SECONDS = 30
 BLOCK_TIME = 3600
 

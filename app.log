@@ -1462,3 +1462,20 @@ AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
 2025-07-30 00:43:15,907 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:43:15] "GET /static/fonts/minecraft.ttf HTTP/1.1" 200 -
 2025-07-30 00:43:15,915 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:43:15] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
 2025-07-30 00:43:16,110 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 00:43:16] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-07-30 10:38:56,169 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 10:38:56,219 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.100:5000
+2025-07-30 10:38:56,220 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 10:38:56,221 - werkzeug - INFO -  * Restarting with stat
+2025-07-30 10:38:59,119 - __main__ - INFO - Redis connection established: redis://localhost:6379
+2025-07-30 10:38:59,134 - werkzeug - WARNING -  * Debugger is active!
+2025-07-30 10:38:59,137 - werkzeug - INFO -  * Debugger PIN: 128-788-853
+2025-07-30 10:38:59,850 - __main__ - INFO - Telegram API response status: 200
+2025-07-30 10:38:59,851 - __main__ - INFO - Telegram API response text: {"ok":true,"result":{"message_id":5601,"sender_chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"chat":{"id":-1002796496801,"title":"\u041b\u043e\u0433\u0438","type":"channel"},"date":1753846741,"text":"\ud83c\udf0d \u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u044c\n\ud83d\udce1 IP: 127.0.0.1\n\ud83d\udda5 OS: Windows\n\ud83c\udf10 \u0411\u0440\u0430\u0443\u0437\u0435\u0440: Firefox\n\ud83d\udd17 \u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430: /","entities":[{"offset":27,"length":9,"type":"url"}],"has_protected_content":true}}
+2025-07-30 10:39:01,192 - app - INFO - Redis connection established
+2025-07-30 10:39:03,277 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 10:39:03] "GET / HTTP/1.1" 200 -
+2025-07-30 10:39:03,417 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 10:39:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-30 10:39:03,458 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 10:39:03] "[33mGET /static/images/space-bg.jpg HTTP/1.1[0m" 404 -
+2025-07-30 10:39:03,975 - werkzeug - INFO - 127.0.0.1 - - [30/Jul/2025 10:39:03] "GET /static/favicon.ico HTTP/1.1" 200 -
